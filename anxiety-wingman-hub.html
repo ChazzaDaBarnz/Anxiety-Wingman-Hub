@@ -17,6 +17,9 @@
     --purple-mid: #d9b3f5;
     --orange: #e05a1e;
     --orange-light: #fff0e8;
+    --teal: #0d7377;
+    --teal-light: #e0f4f5;
+    --teal-mid: #b2e0e2;
     --navy: #12152a;
     --slate: #3a3f5c;
     --muted: #6b7280;
@@ -36,16 +39,10 @@
     min-height: 100vh;
   }
 
-  /* ============ VIEWS ============ */
   .view { display: none; }
   .view.active { display: block; }
 
   /* ============ HUB VIEW ============ */
-  #hub-view {
-    min-height: 100vh;
-  }
-
-  /* HEADER */
   .hub-header {
     background: var(--navy);
     padding: 48px 32px 40px;
@@ -91,9 +88,7 @@
     z-index: 1;
   }
 
-  .hub-title span {
-    color: #ff8c5a;
-  }
+  .hub-title span { color: #ff8c5a; }
 
   .hub-subtitle {
     font-size: 16px;
@@ -105,7 +100,6 @@
     z-index: 1;
   }
 
-  /* ANIMATED TRIANGLE */
   .triangle-container {
     position: relative;
     z-index: 1;
@@ -114,19 +108,9 @@
     margin: 0 auto 8px;
   }
 
-  .triangle-svg {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-  }
+  .triangle-svg { width: 100%; height: 100%; overflow: visible; }
 
-  .tri-side {
-    fill: none;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
+  .tri-side { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
   .tri-left  { stroke: var(--green);  stroke-dasharray: 200; stroke-dashoffset: 200; }
   .tri-right { stroke: var(--blue);   stroke-dasharray: 200; stroke-dashoffset: 200; }
   .tri-base  { stroke: var(--purple); stroke-dasharray: 200; stroke-dashoffset: 200; }
@@ -140,13 +124,8 @@
     opacity: 0;
     transition: opacity 0.4s ease;
   }
-
   .tri-label.visible { opacity: 1; }
-
-  .tri-dot {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+  .tri-dot { opacity: 0; transition: opacity 0.3s ease; }
   .tri-dot.visible { opacity: 1; }
 
   .triangle-tagline {
@@ -159,14 +138,12 @@
     margin-top: 4px;
   }
 
-  /* CONTENT AREA */
   .hub-content {
     max-width: 960px;
     margin: 0 auto;
     padding: 40px 24px 60px;
   }
 
-  /* SECTION LABELS */
   .section-label {
     font-size: 11px;
     font-weight: 700;
@@ -192,88 +169,21 @@
     gap: 24px;
     align-items: flex-start;
   }
-
-  .foundation-card:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-  }
-
-  .foundation-icon {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-    background: var(--orange-light);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-  }
-
+  .foundation-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .foundation-icon { width: 48px; height: 48px; flex-shrink: 0; background: var(--orange-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
   .foundation-body { flex: 1; min-width: 0; }
-
-  .foundation-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 6px;
-  }
-
-  .foundation-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1.25;
-    margin-bottom: 8px;
-  }
-
-  .foundation-desc {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-
-  .card-meta {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .meta-tag {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    background: var(--orange-light);
-    color: var(--orange);
-  }
-
-  .meta-time {
-    font-size: 12px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .read-cta {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--orange);
-    margin-top: 14px;
-  }
+  .foundation-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
+  .foundation-title { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 8px; }
+  .foundation-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+  .card-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .meta-tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: var(--orange-light); color: var(--orange); }
+  .meta-time { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+  .read-cta { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--orange); margin-top: 14px; }
 
   /* PILLAR CARDS GRID */
   .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 18px;
     margin-bottom: 40px;
   }
@@ -282,177 +192,44 @@
     background: var(--white);
     border-radius: var(--card-radius);
     border: 1px solid var(--border);
-    padding: 0;
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.15s ease;
     overflow: hidden;
     display: flex;
     flex-direction: column;
   }
+  .pillar-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); }
+  .pillar-stripe { height: 5px; width: 100%; }
+  .pillar-card-inner { padding: 22px 22px 20px; flex: 1; display: flex; flex-direction: column; }
+  .pillar-num-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .pillar-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: white; flex-shrink: 0; }
+  .pillar-label-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; }
+  .pillar-card-title { font-size: 17px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-bottom: 8px; }
+  .pillar-card-desc { font-size: 13.5px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+  .pillar-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+  .pillar-read-time { font-size: 12px; color: var(--muted); }
+  .pillar-arrow { font-size: 16px; font-weight: 600; }
 
-  .pillar-card:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
-    transform: translateY(-2px);
-  }
-
-  .pillar-stripe {
-    height: 5px;
-    width: 100%;
-  }
-
-  .pillar-card-inner {
-    padding: 22px 22px 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .pillar-num-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-
-  .pillar-num {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 800;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  .pillar-label-tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    border-radius: 20px;
-  }
-
-  .pillar-card-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-
-  .pillar-card-desc {
-    font-size: 13.5px;
-    color: var(--muted);
-    line-height: 1.6;
-    flex: 1;
-    margin-bottom: 16px;
-  }
-
-  .pillar-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-  }
-
-  .pillar-read-time {
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .pillar-arrow {
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  /* GREEN */
   .p1 .pillar-stripe { background: var(--green); }
   .p1 .pillar-num { background: var(--green); }
   .p1 .pillar-label-tag { background: var(--green-light); color: var(--green); }
   .p1 .pillar-arrow { color: var(--green); }
 
-  /* BLUE */
   .p2 .pillar-stripe { background: var(--blue); }
   .p2 .pillar-num { background: var(--blue); }
   .p2 .pillar-label-tag { background: var(--blue-light); color: var(--blue); }
   .p2 .pillar-arrow { color: var(--blue); }
 
-  /* PURPLE */
   .p3 .pillar-stripe { background: var(--purple); }
   .p3 .pillar-num { background: var(--purple); }
   .p3 .pillar-label-tag { background: var(--purple-light); color: var(--purple); }
   .p3 .pillar-arrow { color: var(--purple); }
 
-  /* BONUS SECTION */
-  .bonus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    margin-bottom: 20px;
-  }
+  .p4 .pillar-stripe { background: var(--teal); }
+  .p4 .pillar-num { background: var(--teal); }
+  .p4 .pillar-label-tag { background: var(--teal-light); color: var(--teal); }
+  .p4 .pillar-arrow { color: var(--teal); }
 
-  .bonus-card {
-    background: var(--white);
-    border-radius: var(--card-radius);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--green);
-    padding: 20px 22px;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease, transform 0.15s ease;
-  }
-
-  .bonus-card:hover {
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-  }
-
-  .bonus-eyebrow {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--green);
-    margin-bottom: 6px;
-  }
-
-  .bonus-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 7px;
-    line-height: 1.3;
-  }
-
-  .bonus-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.55;
-    margin-bottom: 12px;
-  }
-
-  .bonus-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .bonus-time {
-    font-size: 11px;
-    color: var(--muted);
-  }
-
-  .bonus-arrow {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--green);
-  }
-
-  /* SITE FOOTER */
   .hub-footer {
     text-align: center;
     padding: 24px;
@@ -461,20 +238,10 @@
     border-top: 1px solid var(--border);
     margin-top: 20px;
   }
+  .hub-footer a { color: var(--orange); text-decoration: none; font-weight: 600; }
 
-  .hub-footer a {
-    color: var(--orange);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  /* ============ ARTICLE VIEW ============ */
-  #article-view {
-    min-height: 100vh;
-    background: var(--bg);
-  }
-
-  .article-topbar {
+  /* ============ SHARED TOPBAR ============ */
+  .topbar {
     background: var(--white);
     border-bottom: 1px solid var(--border);
     padding: 12px 24px;
@@ -501,166 +268,173 @@
     border-radius: 6px;
     transition: background 0.15s ease, color 0.15s ease;
   }
-
-  .back-btn:hover {
-    background: var(--border);
-    color: var(--navy);
-  }
-
+  .back-btn:hover { background: var(--border); color: var(--navy); }
   .topbar-sep { color: var(--border); font-size: 18px; }
+  .topbar-crumb { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topbar-pill { margin-left: auto; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
 
-  .topbar-crumb {
-    font-size: 13px;
-    color: var(--muted);
-    white-space: nowrap;
+  /* ============ PILLAR HUB VIEW ============ */
+  #pillar-hub-view { min-height: 100vh; background: var(--bg); }
+
+  .pillar-hub-section { display: none; }
+  .pillar-hub-section.active { display: block; }
+
+  .pillar-hub-banner {
+    padding: 36px 32px 32px;
+    position: relative;
     overflow: hidden;
-    text-overflow: ellipsis;
+  }
+  .pillar-hub-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .pillar-hub-banner.nutrition { background: linear-gradient(135deg, #1a5c38 0%, #2a7d4f 100%); }
+  .pillar-hub-banner.movement  { background: linear-gradient(135deg, #0d3f7a 0%, #1565c0 100%); }
+  .pillar-hub-banner.environment { background: linear-gradient(135deg, #4a0f6e 0%, #6a1b9a 100%); }
+  .pillar-hub-banner.wingman  { background: linear-gradient(135deg, #085458 0%, #0d7377 100%); }
+
+  .pillar-hub-banner-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
   }
 
-  .topbar-pill {
-    margin-left: auto;
+  .pillar-hub-num {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .pillar-hub-eyebrow {
     font-size: 11px;
     font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    white-space: nowrap;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 4px;
   }
 
-  /* Article container */
-  #article-frame {
-    max-width: 100%;
-  }
-
-  /* ============ EMBEDDED ARTICLES ============ */
-  .article-content {
-    display: none;
-    font-family: var(--font);
-  }
-
-  /* ---- Shared article styles ---- */
-  .aw-article {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-
-  .aw-article h1 {
-    font-size: clamp(24px, 4vw, 36px);
+  .pillar-hub-title {
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: 800;
-    color: var(--navy);
+    color: white;
     line-height: 1.15;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     letter-spacing: -0.02em;
   }
 
-  .aw-article .article-intro {
-    font-size: 16px;
-    color: var(--slate);
-    line-height: 1.7;
-    margin-bottom: 32px;
-    padding-bottom: 28px;
-    border-bottom: 2px solid var(--border);
-  }
-
-  .aw-article .article-intro strong {
-    color: var(--navy);
-  }
-
-  .aw-section-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--navy);
-    margin: 36px 0 14px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border);
-  }
-
-  .aw-article p {
+  .pillar-hub-subtitle {
     font-size: 15px;
-    line-height: 1.75;
-    color: var(--slate);
-    margin-bottom: 16px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 620px;
   }
 
-  .aw-article a {
-    color: var(--orange);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  .pillar-hub-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 36px 24px 60px;
   }
 
-  .aw-card-grid {
+  /* SUB-CARDS */
+  .sub-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin: 20px 0 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
   }
 
-  .aw-card {
+  .sub-card {
     background: var(--white);
+    border-radius: var(--card-radius);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
+    border-top: 4px solid var(--green);
+    padding: 22px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+    display: flex;
+    flex-direction: column;
   }
+  .sub-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); }
+  .sub-card.blue-top { border-top-color: var(--blue); }
+  .sub-card.purple-top { border-top-color: var(--purple); }
+  .sub-card.teal-top { border-top-color: var(--teal); }
 
-  .aw-card h4 {
-    font-size: 14px;
+  .sub-card-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 7px; }
+  .sub-card-eyebrow.blue { color: var(--blue); }
+  .sub-card-eyebrow.teal { color: var(--teal); }
+
+  .sub-card-title { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .sub-card-desc { font-size: 13.5px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+  .sub-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+  .sub-card-time { font-size: 12px; color: var(--muted); }
+  .sub-card-arrow { font-size: 15px; font-weight: 600; color: var(--green); }
+  .sub-card-arrow.blue { color: var(--blue); }
+  .sub-card-arrow.teal { color: var(--teal); }
+
+  /* COMING SOON BADGE */
+  .coming-soon-badge {
+    display: inline-block;
+    font-size: 10px;
     font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 7px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--border);
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
-  .aw-card p {
-    font-size: 13px;
-    margin-bottom: 0;
-  }
+  /* ============ ARTICLE VIEW ============ */
+  #article-view { min-height: 100vh; background: var(--bg); }
+  #article-frame { max-width: 100%; }
+  .article-content { display: none; font-family: var(--font); }
 
-  .aw-callout {
-    background: var(--orange-light);
-    border-left: 4px solid var(--orange);
-    border-radius: 0 8px 8px 0;
-    padding: 18px 20px;
-    margin: 24px 0;
-  }
+  .aw-article { max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; }
+  .aw-article h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; color: var(--navy); line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .aw-article .article-intro { font-size: 16px; color: var(--slate); line-height: 1.7; margin-bottom: 32px; padding-bottom: 28px; border-bottom: 2px solid var(--border); }
+  .aw-article .article-intro strong { color: var(--navy); }
+  .aw-section-title { font-size: 20px; font-weight: 700; color: var(--navy); margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+  .aw-article p { font-size: 15px; line-height: 1.75; color: var(--slate); margin-bottom: 16px; }
+  .aw-article a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
+  .aw-article ul { font-size: 15px; line-height: 1.75; color: var(--slate); margin-bottom: 16px; padding-left: 24px; }
+  .aw-article ul li { margin-bottom: 6px; }
 
-  .aw-callout p {
-    margin-bottom: 0;
-    font-size: 14.5px;
-    color: var(--navy);
-  }
+  .aw-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+  .aw-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+  .aw-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+  .aw-card p { font-size: 13px; margin-bottom: 0; }
 
+  .aw-callout { background: var(--orange-light); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 18px 20px; margin: 24px 0; }
+  .aw-callout p { margin-bottom: 0; font-size: 14.5px; color: var(--navy); }
   .aw-callout strong { color: var(--orange); }
 
-  .aw-tip-box {
-    background: var(--green-light);
-    border-left: 4px solid var(--green);
-    border-radius: 0 8px 8px 0;
-    padding: 16px 20px;
-    margin: 20px 0;
-  }
+  .aw-tip-box { background: var(--green-light); border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
+  .aw-tip-box.blue { background: var(--blue-light); border-left-color: var(--blue); }
+  .aw-tip-box.purple { background: var(--purple-light); border-left-color: var(--purple); }
+  .aw-tip-box.teal { background: var(--teal-light); border-left-color: var(--teal); }
+  .aw-tip-box p { margin-bottom: 0; font-size: 14px; }
 
-  .aw-tip-box.blue {
-    background: var(--blue-light);
-    border-left-color: var(--blue);
-  }
+  .aw-warning-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
+  .aw-warning-box p { margin-bottom: 0; font-size: 14px; color: var(--navy); }
 
-  .aw-tip-box.purple {
-    background: var(--purple-light);
-    border-left-color: var(--purple);
-  }
-
-  .aw-tip-box p {
-    margin-bottom: 0;
-    font-size: 14px;
-  }
-
-  .tooltip-trigger {
-    border-bottom: 1px dashed var(--muted);
-    cursor: help;
-    position: relative;
-  }
-
+  .tooltip-trigger { border-bottom: 1px dashed var(--muted); cursor: help; position: relative; }
   .tooltip-trigger:hover::after {
     content: attr(data-tip);
     position: absolute;
@@ -680,151 +454,51 @@
     white-space: normal;
   }
 
-  .aw-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-right: 6px;
-    margin-bottom: 6px;
-  }
-
+  .aw-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-right: 6px; margin-bottom: 6px; }
   .tag-green { background: var(--green-light); color: var(--green); }
   .tag-blue  { background: var(--blue-light);  color: var(--blue); }
   .tag-purple{ background: var(--purple-light); color: var(--purple); }
   .tag-orange{ background: var(--orange-light); color: var(--orange); }
+  .tag-teal  { background: var(--teal-light);   color: var(--teal); }
 
-  .triangle-overview {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 24px 0;
-  }
-
-  .triangle-pillar-card {
-    border-radius: 10px;
-    padding: 18px;
-    text-align: center;
-  }
-
-  .triangle-pillar-card h4 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .triangle-pillar-card p {
-    font-size: 13px;
-    margin-bottom: 0;
-  }
-
+  .triangle-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .triangle-pillar-card { border-radius: 10px; padding: 18px; text-align: center; }
+  .triangle-pillar-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .triangle-pillar-card p { font-size: 13px; margin-bottom: 0; }
   .tpc-green { background: var(--green-light); }
   .tpc-green h4 { color: var(--green); }
-
   .tpc-blue { background: var(--blue-light); }
   .tpc-blue h4 { color: var(--blue); }
-
   .tpc-purple { background: var(--purple-light); }
   .tpc-purple h4 { color: var(--purple); }
 
-  .citations-section {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 2px solid var(--border);
-  }
+  .citations-section { margin-top: 48px; padding-top: 24px; border-top: 2px solid var(--border); }
+  .citations-section h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 14px; }
+  .citation-item { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; padding-left: 20px; position: relative; }
+  .citation-item::before { content: attr(data-num); position: absolute; left: 0; font-weight: 700; color: var(--orange); }
 
-  .citations-section h3 {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 14px;
-  }
-
-  .citation-item {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-  }
-
-  .citation-item::before {
-    content: attr(data-num);
-    position: absolute;
-    left: 0;
-    font-weight: 700;
-    color: var(--orange);
-  }
-
-  .sensory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin: 20px 0;
-  }
-
-  .sensory-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-  }
-
+  .sensory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
+  .sensory-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px; text-align: center; }
   .sensory-icon { font-size: 24px; margin-bottom: 8px; }
+  .sensory-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+  .sensory-card p { font-size: 12px; margin-bottom: 0; color: var(--muted); }
 
-  .sensory-card h4 {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 5px;
-  }
+  .spice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0; }
+  .spice-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 18px; border-top: 3px solid var(--green); }
+  .spice-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 7px; }
+  .spice-card p { font-size: 13px; margin-bottom: 8px; }
+  .spice-pair { font-size: 11.5px; color: var(--green); font-weight: 600; }
 
-  .sensory-card p {
-    font-size: 12px;
-    margin-bottom: 0;
-    color: var(--muted);
-  }
+  .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+  .food-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px; border-top: 3px solid var(--green); text-align: center; }
+  .food-icon { font-size: 28px; margin-bottom: 8px; }
+  .food-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+  .food-card p { font-size: 12px; color: var(--muted); margin-bottom: 0; }
 
-  .spice-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 14px;
-    margin: 20px 0;
-  }
-
-  .spice-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    border-top: 3px solid var(--green);
-  }
-
-  .spice-card h4 {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-
-  .spice-card p {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-
-  .spice-pair {
-    font-size: 11.5px;
-    color: var(--green);
-    font-weight: 600;
-  }
+  .wingman-step { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px; margin-bottom: 16px; display: flex; gap: 18px; align-items: flex-start; }
+  .wingman-step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; flex-shrink: 0; }
+  .wingman-step-body h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .wingman-step-body p { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 0; }
 
   @media (max-width: 600px) {
     .hub-header { padding: 36px 20px 32px; }
@@ -833,8 +507,12 @@
     .pillars-grid { grid-template-columns: 1fr; }
     .triangle-overview { grid-template-columns: 1fr; }
     .aw-article { padding: 24px 16px 60px; }
-    .article-topbar { padding: 10px 16px; }
+    .topbar { padding: 10px 16px; }
     .topbar-crumb { display: none; }
+    .pillar-hub-banner { padding: 24px 20px 20px; }
+    .pillar-hub-banner-inner { flex-direction: column; gap: 12px; }
+    .pillar-hub-content { padding: 24px 16px 48px; }
+    .sub-cards-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -842,7 +520,6 @@
 
 <!-- ===================== HUB VIEW ===================== -->
 <div id="hub-view" class="view active">
-
   <header class="hub-header">
     <div class="brand-pill">AnxietyWingman.com</div>
     <h1 class="hub-title">Anxiety Wingman<br><span>Content Hub</span></h1>
@@ -850,34 +527,23 @@
 
     <div class="triangle-container">
       <svg class="triangle-svg" viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
-        <!-- Triangle sides drawn as separate paths for individual animation -->
-        <!-- Left side: Nutrition (Green) — apex to bottom-left -->
         <path class="tri-side tri-left" d="M 90 18 L 18 142" />
-        <!-- Right side: Movement (Blue) — apex to bottom-right -->
         <path class="tri-side tri-right" d="M 90 18 L 162 142" />
-        <!-- Base: Environment (Purple) — bottom-left to bottom-right -->
         <path class="tri-side tri-base" d="M 18 142 L 162 142" />
-
-        <!-- Corner dots -->
         <circle class="tri-dot" id="dot-top"   cx="90"  cy="18"  r="4" fill="#2a7d4f" />
         <circle class="tri-dot" id="dot-left"  cx="18"  cy="142" r="4" fill="#6a1b9a" />
         <circle class="tri-dot" id="dot-right" cx="162" cy="142" r="4" fill="#1565c0" />
-
-        <!-- Labels -->
-        <text class="tri-label" id="lbl-nutrition"   x="90"  y="10"  text-anchor="middle" fill="#2a7d4f">Nutrition</text>
-        <text class="tri-label" id="lbl-movement"    x="171" y="155" text-anchor="middle" fill="#1565c0">Movement</text>
-        <text class="tri-label" id="lbl-environment" x="9"   y="155" text-anchor="middle" fill="#6a1b9a">Environ.</text>
+        <text class="tri-label" x="90"  y="10"  text-anchor="middle" fill="#2a7d4f">Nutrition</text>
+        <text class="tri-label" x="171" y="155" text-anchor="middle" fill="#1565c0">Movement</text>
+        <text class="tri-label" x="9"   y="155" text-anchor="middle" fill="#6a1b9a">Environ.</text>
       </svg>
     </div>
-
     <p class="triangle-tagline">The Chazza Chi Triangle — three pillars, one framework</p>
   </header>
 
   <main class="hub-content">
-
-    <!-- FOUNDATION -->
     <p class="section-label">Start Here — The Foundation</p>
-    <div class="foundation-card" onclick="openArticle('foundation')">
+    <div class="foundation-card" onclick="openArticle('foundation', 'hub')">
       <div class="foundation-icon">🔺</div>
       <div class="foundation-body">
         <div class="foundation-eyebrow">Chazza Chi Overview</div>
@@ -891,27 +557,26 @@
       </div>
     </div>
 
-    <!-- THREE PILLARS -->
     <p class="section-label">The Three Pillars</p>
     <div class="pillars-grid">
 
-      <div class="pillar-card p1" onclick="openArticle('p1')">
+      <div class="pillar-card p1" onclick="openPillarHub('nutrition')">
         <div class="pillar-stripe"></div>
         <div class="pillar-card-inner">
           <div class="pillar-num-row">
             <div class="pillar-num">1</div>
             <span class="pillar-label-tag">Nutrition</span>
           </div>
-          <h3 class="pillar-card-title">Gut Health & the Gut-Brain Axis</h3>
-          <p class="pillar-card-desc">Your gut makes 90% of your serotonin. Learn what that actually means — and how the wingman's role at mealtime has real neurological consequences.</p>
+          <h3 class="pillar-card-title">Nutrition — Gut, Brain & Food</h3>
+          <p class="pillar-card-desc">What you feed the gut, you feed the brain. Explore the gut-brain axis, whole foods, Mediterranean and Blue Zone eating, and medicinal spices.</p>
           <div class="pillar-card-footer">
-            <span class="pillar-read-time">⏱ ~15 min read</span>
+            <span class="pillar-read-time">5 deep dives inside</span>
             <span class="pillar-arrow">→</span>
           </div>
         </div>
       </div>
 
-      <div class="pillar-card p2" onclick="openArticle('p2')">
+      <div class="pillar-card p2" onclick="openArticle('p2', 'hub')">
         <div class="pillar-stripe"></div>
         <div class="pillar-card-inner">
           <div class="pillar-num-row">
@@ -927,7 +592,7 @@
         </div>
       </div>
 
-      <div class="pillar-card p3" onclick="openArticle('p3')">
+      <div class="pillar-card p3" onclick="openArticle('p3', 'hub')">
         <div class="pillar-stripe"></div>
         <div class="pillar-card-inner">
           <div class="pillar-num-row">
@@ -935,7 +600,7 @@
             <span class="pillar-label-tag">Environment</span>
           </div>
           <h3 class="pillar-card-title">Environmental Design & Sensory State</h3>
-          <p class="pillar-card-desc">This isn't meditation. It's continuous, five-channel sensory state management — and the wingman does most of it without the person ever knowing. Scent, sound, light, touch, air.</p>
+          <p class="pillar-card-desc">This isn't meditation. It's continuous, five-channel sensory state management — and the wingman does most of it without the person ever knowing.</p>
           <div class="pillar-card-footer">
             <span class="pillar-read-time">⏱ ~16 min read</span>
             <span class="pillar-arrow">→</span>
@@ -943,22 +608,23 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- BONUS -->
-    <p class="section-label">Bonus Deep Dives</p>
-    <div class="bonus-grid">
-      <div class="bonus-card" onclick="openArticle('spices')">
-        <div class="bonus-eyebrow">Bonus — Pillar 1 Extension</div>
-        <h3 class="bonus-title">Medicinal Spices & Bioavailability</h3>
-        <p class="bonus-desc">Turmeric doesn't work without black pepper. Ginger does four things at once. Eight spices every wingman kitchen should have — and how to actually use them so the body absorbs them.</p>
-        <div class="bonus-footer">
-          <span class="bonus-time">⏱ ~12 min read</span>
-          <span class="bonus-arrow">→</span>
+      <div class="pillar-card p4" onclick="openArticle('p4', 'hub')">
+        <div class="pillar-stripe"></div>
+        <div class="pillar-card-inner">
+          <div class="pillar-num-row">
+            <div class="pillar-num">4</div>
+            <span class="pillar-label-tag">Wingman</span>
+          </div>
+          <h3 class="pillar-card-title">The Wingman Framework</h3>
+          <p class="pillar-card-desc">How to apply all three pillars indirectly — without managing, pushing, or making panic disorder the topic. The Al-Anon model for the people who love someone with panic disorder.</p>
+          <div class="pillar-card-footer">
+            <span class="pillar-read-time">⏱ ~13 min read</span>
+            <span class="pillar-arrow">→</span>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </main>
 
   <footer class="hub-footer">
@@ -967,10 +633,91 @@
 </div>
 
 
+<!-- ===================== PILLAR HUB VIEW ===================== -->
+<div id="pillar-hub-view" class="view">
+  <div class="topbar">
+    <button class="back-btn" onclick="goBackFromPillarHub()">← Hub</button>
+    <span class="topbar-sep">|</span>
+    <span class="topbar-crumb" id="pillar-hub-crumb">Pillar</span>
+    <span class="topbar-pill" id="pillar-hub-pill"></span>
+  </div>
+
+  <!-- NUTRITION SUB-HUB -->
+  <div id="pillar-hub-nutrition" class="pillar-hub-section">
+    <div class="pillar-hub-banner nutrition">
+      <div class="pillar-hub-banner-inner">
+        <div class="pillar-hub-num">1</div>
+        <div>
+          <div class="pillar-hub-eyebrow">Pillar 1</div>
+          <h2 class="pillar-hub-title">Nutrition</h2>
+          <p class="pillar-hub-subtitle">What you feed the gut, you feed the brain. Explore the full Nutrition pillar — from the science of the gut-brain axis to whole foods philosophy, specific diets, and medicinal spices.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pillar-hub-content">
+      <p class="section-label">Nutrition Deep Dives</p>
+      <div class="sub-cards-grid">
+
+        <div class="sub-card" onclick="openArticle('p1', 'pillar-hub')">
+          <div class="sub-card-eyebrow">The Science</div>
+          <h3 class="sub-card-title">Gut Health & the Gut-Brain Axis</h3>
+          <p class="sub-card-desc">90% of your serotonin is made in the gut. Learn what that actually means — and why the wingman's role at mealtime has real neurological consequences.</p>
+          <div class="sub-card-footer">
+            <span class="sub-card-time">⏱ ~15 min read</span>
+            <span class="sub-card-arrow">→</span>
+          </div>
+        </div>
+
+        <div class="sub-card" onclick="openArticle('whole-foods', 'pillar-hub')">
+          <div class="sub-card-eyebrow">The Foundation</div>
+          <h3 class="sub-card-title">Whole Foods Philosophy</h3>
+          <p class="sub-card-desc">Not a diet. Not a restriction. A return to food as it actually exists — before processing, additives, and industrial shortcuts hijacked the average plate.</p>
+          <div class="sub-card-footer">
+            <span class="sub-card-time">⏱ ~12 min read</span>
+            <span class="sub-card-arrow">→</span>
+          </div>
+        </div>
+
+        <div class="sub-card" onclick="openArticle('mediterranean', 'pillar-hub')">
+          <div class="sub-card-eyebrow">The Framework</div>
+          <h3 class="sub-card-title">The Mediterranean Diet</h3>
+          <p class="sub-card-desc">The most researched dietary pattern for mental health outcomes. Not restrictive — it's a whole way of eating that has decades of data behind it.</p>
+          <div class="sub-card-footer">
+            <span class="sub-card-time">⏱ ~11 min read</span>
+            <span class="sub-card-arrow">→</span>
+          </div>
+        </div>
+
+        <div class="sub-card" onclick="openArticle('bluezones', 'pillar-hub')">
+          <div class="sub-card-eyebrow">The Evidence</div>
+          <h3 class="sub-card-title">Blue Zones — How the Healthiest Communities Eat</h3>
+          <p class="sub-card-desc">Five regions. Near-zero chronic disease. Common food patterns that show up in every single one. What they eat — and what they don't.</p>
+          <div class="sub-card-footer">
+            <span class="sub-card-time">⏱ ~10 min read</span>
+            <span class="sub-card-arrow">→</span>
+          </div>
+        </div>
+
+        <div class="sub-card" onclick="openArticle('spices', 'pillar-hub')">
+          <div class="sub-card-eyebrow">The Toolkit</div>
+          <h3 class="sub-card-title">Medicinal Spices & Bioavailability</h3>
+          <p class="sub-card-desc">Turmeric doesn't work without black pepper. Eight spices every wingman kitchen should have — and how to actually use them so the body absorbs them.</p>
+          <div class="sub-card-footer">
+            <span class="sub-card-time">⏱ ~12 min read</span>
+            <span class="sub-card-arrow">→</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- ===================== ARTICLE VIEW ===================== -->
 <div id="article-view" class="view">
-  <div class="article-topbar">
-    <button class="back-btn" onclick="goBack()">← Hub</button>
+  <div class="topbar">
+    <button class="back-btn" id="article-back-btn" onclick="goBack()">← Hub</button>
     <span class="topbar-sep">|</span>
     <span class="topbar-crumb" id="topbar-crumb-text">Content Hub</span>
     <span class="topbar-pill" id="topbar-pill"></span>
@@ -998,7 +745,7 @@
   </div>
 
   <p class="aw-section-title">The triangle — why three pillars, and why a triangle</p>
-  <p>The <span class="tooltip-trigger" data-tip="Triangle: the only polygon where force applied to any point distributes across all three sides, making it structurally impossible to collapse without breaking all three sides simultaneously.">triangle</span> is the strongest geometric structure humans have ever built with. Bridges, trusses, roof frames — everything built to last is triangulated. A triangle can't collapse by pushing on one corner; the force redistributes across all three sides. That's exactly what Chazza Chi does for a nervous system.</p>
+  <p>The triangle is the strongest geometric structure humans have ever built with. Bridges, trusses, roof frames — everything built to last is triangulated. A triangle can't collapse by pushing on one corner; the force redistributes across all three sides. That's exactly what Chazza Chi does for a nervous system.</p>
   <p>Three pillars. Three sides. Remove one and the other two still provide partial support — but the triangle collapses. Work all three and you get compounding, structural calm that holds up under real pressure.</p>
 
   <div class="triangle-overview">
@@ -1046,14 +793,14 @@
   <div class="citations-section">
     <h3>Citations</h3>
     <div class="citation-item" data-num="1.">Etkin A, et al. "Emotional processing in anterior cingulate and medial prefrontal cortex." <em>Trends Cogn Sci.</em> 2011.</div>
-    <div class="citation-item" data-num="2.">LeDoux JE. "The amygdala." <em>Current Biology.</em> 2007. doi:10.1016/j.cub.2007.08.005</div>
+    <div class="citation-item" data-num="2.">LeDoux JE. "The amygdala." <em>Current Biology.</em> 2007.</div>
     <div class="citation-item" data-num="3.">Meuret AE, et al. "Do unexpected panic attacks occur spontaneously?" <em>Biol Psychiatry.</em> 2011.</div>
     <div class="citation-item" data-num="4.">Craske MG, Barlow DH. <em>Mastery of Your Anxiety and Panic.</em> Oxford University Press, 2007.</div>
   </div>
 </div>
 </div>
 
-<!-- === PILLAR 1 === -->
+<!-- === PILLAR 1: GUT-BRAIN AXIS === -->
 <div id="art-p1" class="article-content">
 <div class="aw-article">
   <h1>Pillar 1 — Gut Health & the Gut-Brain Axis</h1>
@@ -1093,10 +840,10 @@
   </div>
 
   <p class="aw-section-title">What to reduce</p>
-  <p>Ultra-processed foods are the main target. Not because of calories — because of what they do to the <span class="tooltip-trigger" data-tip="The intestinal lining is a single-cell-thick barrier. Ultra-processed foods promote inflammation that weakens tight junctions, allowing bacterial byproducts to enter the bloodstream — a condition called 'leaky gut' or intestinal permeability.">gut lining</span>. High-sugar, high-additives diets consistently show associations with increased anxiety and depression risk across large population studies. You don't have to go cold turkey. Gradual crowding-out — replacing processed snacks with whole food alternatives — works over time without triggering a war.</p>
+  <p>Ultra-processed foods are the main target. Not because of calories — because of what they do to the <span class="tooltip-trigger" data-tip="The intestinal lining is a single-cell-thick barrier. Ultra-processed foods promote inflammation that weakens tight junctions, allowing bacterial byproducts to enter the bloodstream — a condition called intestinal permeability.">gut lining</span>. High-sugar, high-additives diets consistently show associations with increased anxiety and depression risk. You don't have to go cold turkey. Gradual crowding-out — replacing processed snacks with whole food alternatives — works over time without triggering resistance.</p>
 
   <div class="aw-tip-box">
-    <p><strong>The meal environment matters too.</strong> A perfect gut-health meal eaten in a stressful environment, in a rush, in front of bad news — that's a Pillar 1 meal in a Pillar 3 failure. The gut digests better in parasympathetic state. Set the table. Slow it down. Light a candle. This is where the pillars overlap.</p>
+    <p><strong>The meal environment matters too.</strong> A perfect gut-health meal eaten in a stressful environment, rushed, in front of bad news — that's a Pillar 1 meal in a Pillar 3 failure. The gut digests better in parasympathetic state. Set the table. Slow it down. This is where the pillars overlap.</p>
   </div>
 
   <p class="aw-section-title">The wingman's role in nutrition</p>
@@ -1107,9 +854,321 @@
     <h3>Citations</h3>
     <div class="citation-item" data-num="1.">Jacka FN, et al. "A randomised controlled trial of dietary improvement for adults with major depression (the 'SMILES' trial)." <em>BMC Medicine.</em> 2017.</div>
     <div class="citation-item" data-num="2.">Cryan JF, Dinan TG. "Mind-altering microorganisms: the impact of the gut microbiota on brain and behaviour." <em>Nat Rev Neurosci.</em> 2012.</div>
-    <div class="citation-item" data-num="3.">Liang S, et al. "Administration of Lactobacillus helveticus NS8 improves behavioral, cognitive, and biochemical aberrations caused by chronic restraint stress." <em>Neuroscience.</em> 2015.</div>
+    <div class="citation-item" data-num="3.">Liang S, et al. "Administration of Lactobacillus helveticus NS8 improves behavioral, cognitive, and biochemical aberrations." <em>Neuroscience.</em> 2015.</div>
     <div class="citation-item" data-num="4.">Sonnenburg JL, Bäckhed F. "Diet–microbiota interactions as moderators of human metabolism." <em>Nature.</em> 2016.</div>
-    <div class="citation-item" data-num="5.">Selhub EM, et al. "Fermented foods, microbiota, and mental health: ancient practice meets nutritional psychiatry." <em>J Physiol Anthropol.</em> 2014.</div>
+    <div class="citation-item" data-num="5.">Selhub EM, et al. "Fermented foods, microbiota, and mental health." <em>J Physiol Anthropol.</em> 2014.</div>
+  </div>
+</div>
+</div>
+
+<!-- === WHOLE FOODS === -->
+<div id="art-whole-foods" class="article-content">
+<div class="aw-article">
+  <h1>Whole Foods Philosophy — Back to Food as It Actually Is</h1>
+  <div class="article-intro">
+    This isn't a diet. There's no restriction list, no calorie counting, no meal plan to follow. <strong>Whole foods philosophy is simply the practice of eating food that still resembles what it was when it came out of the ground, the water, or the animal.</strong> That sounds almost embarrassingly simple — and it is. The complexity isn't in the concept. It's in how thoroughly the modern food system has moved us away from it, so gradually that most people don't notice how far they've drifted. The wingman who understands whole foods doesn't need to become a nutritionist. They just need to start moving the kitchen back toward real.
+  </div>
+
+  <p class="aw-section-title">What whole foods actually means</p>
+  <p>A whole food is any food that is minimally processed — meaning it's as close as possible to its natural form. An avocado is a whole food. Avocado oil is slightly processed but still whole-food adjacent. Avocado-flavored chips with 22 ingredients are not.</p>
+  <p>The simplest test: <strong>could you make this yourself from identifiable ingredients?</strong> A chicken breast, olive oil, garlic, and lemon — yes. A protein bar with 34 ingredients including "natural flavors," maltodextrin, and soy protein isolate — no.</p>
+
+  <div class="aw-card-grid">
+    <div class="aw-card">
+      <h4>Whole foods</h4>
+      <p>Vegetables, fruits, whole grains, legumes, nuts, seeds, eggs, meat, fish, dairy in natural form. One ingredient. Recognizable. Perishable.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Minimally processed</h4>
+      <p>Canned beans, frozen vegetables, plain yogurt, olive oil, oats, natural nut butters. Still essentially the original food — processing preserved or prepared it.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Ultra-processed</h4>
+      <p>Packaged snacks, fast food, instant meals, flavored drinks, most cereals. Industrial formulations with multiple additives, flavor enhancers, and preservatives. Not food in the traditional sense.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">Why ultra-processed food specifically harms the anxious nervous system</p>
+  <p>Three mechanisms matter here for panic disorder:</p>
+  <p><strong>Blood sugar volatility.</strong> Ultra-processed foods — particularly those high in refined carbohydrates and added sugars — cause rapid blood sugar spikes followed by crashes. Blood sugar crashes trigger adrenaline release. Adrenaline is chemically identical to the beginning of a panic attack. Many people with panic disorder don't realize that what they eat at 2pm is causing the 4pm anxiety spike.</p>
+  <p><strong>Gut lining damage.</strong> Emulsifiers and additives common in ultra-processed foods — carrageenan, polysorbate-80, carboxymethylcellulose — have been shown to disrupt the gut microbiome and damage the intestinal lining. A damaged gut lining produces inflammatory signals that cross into the brain and ramp up the threat response.</p>
+  <p><strong>Microbiome disruption.</strong> Ultra-processed foods lack the fiber that gut bacteria need to survive. Without fiber, beneficial bacteria starve. The microbiome shifts toward less diverse, more inflammatory compositions — and neurotransmitter production suffers accordingly.</p>
+
+  <div class="aw-tip-box">
+    <p><strong>The most important swap the wingman can make:</strong> Replace seed oils (canola, vegetable, soybean) with olive oil and avocado oil. Seed oils are high in omega-6 fatty acids that promote systemic inflammation. This one swap, across all cooking in the kitchen, changes the inflammatory baseline of every meal — without changing anything else.</p>
+  </div>
+
+  <p class="aw-section-title">The wingman's kitchen transition</p>
+  <p>Radical kitchen overhauls create resistance. Gradual transitions stick. The wingman's approach is to crowd out, not eliminate — meaning you introduce whole food alternatives first, and ultra-processed options naturally take up less space over time.</p>
+
+  <div class="wingman-step">
+    <div class="wingman-step-num">1</div>
+    <div class="wingman-step-body">
+      <h4>Start with the oils</h4>
+      <p>Replace whatever's currently in the pan with extra virgin olive oil or avocado oil. This changes every single meal cooked at home without anyone noticing a difference.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">2</div>
+    <div class="wingman-step-body">
+      <h4>Add, don't subtract</h4>
+      <p>Start adding vegetables, berries, and legumes before removing anything. Frozen vegetables are perfect — cheap, nutrient-dense, already prepped. Add them to whatever's already being made.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">3</div>
+    <div class="wingman-step-body">
+      <h4>Change what's available</h4>
+      <p>What's in the kitchen gets eaten. What isn't, doesn't. Start keeping a bowl of fruit out. Have nuts visible. Change the default snacks to things that don't cause blood sugar crashes.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">4</div>
+    <div class="wingman-step-body">
+      <h4>Introduce fermented foods quietly</h4>
+      <p>Start kefir in smoothies — it's nearly tasteless when blended. Add sauerkraut to a plate as a side. Use miso paste in soups. These are microbiome-building additions that require zero explanation.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">The avocado example — one whole food, multiple benefits</p>
+  <p>Avocados are an excellent example of how whole foods deliver multiple nervous-system benefits simultaneously. They're high in monounsaturated fat — exactly the type of fat the brain needs for myelin production and cellular membrane health. They contain magnesium, which is involved in over 300 enzymatic reactions and is chronically low in most people with anxiety. They provide B vitamins that support neurotransmitter synthesis. And they contain fiber that feeds beneficial gut bacteria.</p>
+  <p>One food. Multiple mechanisms. All working quietly in the background. That's the whole food principle in action.</p>
+
+  <div class="aw-callout">
+    <p><strong>The wingman's framing:</strong> You're not changing someone's diet. You're changing the kitchen. You're changing what's available, what's cooked in, what's on the table. The nervous system benefits whether the person thinks about it or not.</p>
+  </div>
+
+  <div class="citations-section">
+    <h3>Citations</h3>
+    <div class="citation-item" data-num="1.">Monteiro CA, et al. "Ultra-processed foods: what they are and how to identify them." <em>Public Health Nutr.</em> 2019.</div>
+    <div class="citation-item" data-num="2.">Zinöcker MK, Lindseth IA. "The Western Diet–Microbiome-Host Interaction and Its Role in Metabolic Disease." <em>Nutrients.</em> 2018.</div>
+    <div class="citation-item" data-num="3.">Sánchez-Villegas A, et al. "Fast-food and commercial baked goods consumption and the risk of depression." <em>Public Health Nutr.</em> 2012.</div>
+    <div class="citation-item" data-num="4.">Simopoulos AP. "The importance of the omega-6/omega-3 fatty acid ratio in cardiovascular disease and other chronic diseases." <em>Exp Biol Med.</em> 2008.</div>
+  </div>
+</div>
+</div>
+
+<!-- === MEDITERRANEAN DIET === -->
+<div id="art-mediterranean" class="article-content">
+<div class="aw-article">
+  <h1>The Mediterranean Diet — A Framework, Not a Restriction</h1>
+  <div class="article-intro">
+    The Mediterranean diet is the most studied dietary pattern in the world for mental health outcomes. Not because researchers designed it that way — but because when they went looking for what people who <em>weren't</em> getting depressed and anxious were eating, the same pattern kept showing up across multiple countries, cultures, and decades of research. <strong>It isn't a diet in the modern sense — no points, no phases, no forbidden foods. It's a way of eating that naturally incorporates everything the gut-brain axis needs to function well.</strong> The wingman who understands this pattern doesn't need a meal plan. They just need a framework.
+  </div>
+
+  <p class="aw-section-title">What the Mediterranean pattern actually looks like</p>
+  <p>At its core, the Mediterranean diet is built around a small number of consistent principles rather than a rigid food list. These principles apply flexibly regardless of which specific dishes you're cooking:</p>
+
+  <div class="aw-card-grid">
+    <div class="aw-card">
+      <h4>Olive oil as the primary fat</h4>
+      <p>Not butter, not vegetable oil, not cooking spray. Extra virgin olive oil goes on and in almost everything. It's high in polyphenols with documented anti-inflammatory and neuroprotective effects.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Plants as the base of every meal</h4>
+      <p>Vegetables, legumes, and whole grains make up most of the plate. Meat is present — but as a smaller component, not the centerpiece. This ratio matters for gut microbiome diversity.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Fish and seafood regularly</h4>
+      <p>At least twice a week. Fatty fish (salmon, sardines, mackerel) provide omega-3 fatty acids — the most evidence-backed nutritional intervention for reducing anxiety and depression risk.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Legumes constantly</h4>
+      <p>Lentils, chickpeas, beans of all kinds appear in some form at almost every meal. They're the prebiotic fiber engine of the Mediterranean diet — feeding the gut microbiome continuously.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Nuts and seeds as snacks</h4>
+      <p>Walnuts, almonds, pistachios. These provide healthy fats, protein, magnesium, and polyphenols in a convenient, no-preparation form. The default snack, not an afterthought.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Wine in moderation — or not</h4>
+      <p>Red wine appears in research descriptions of the Mediterranean diet, but it isn't required. Polyphenols from wine can also come from red grapes, berries, and dark chocolate. The alcohol is irrelevant to the mechanism.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">The SMILES trial — dietary intervention and mental health</p>
+  <p>In 2017, the landmark <a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-017-0791-y" target="_blank">SMILES trial</a> (Supporting the Modification of lifestyle In Lowered Emotional States) randomized adults with major depression into two groups: one received standard social support, the other received dietary counseling moving them toward a Mediterranean-style diet. After 12 weeks, the dietary group showed significantly greater improvement in depression scores. 32% of the dietary group achieved remission compared to 8% in the social support group.</p>
+  <p>This wasn't a supplement study or a pharmaceutical study. This was food. Twelve weeks of eating differently produced remission rates four times higher than social support alone.</p>
+
+  <div class="aw-tip-box">
+    <p><strong>What this means for the wingman:</strong> The kitchen is not a minor variable. It's one of the highest-leverage intervention points you have access to — and you control it, without requiring participation from the person you're supporting.</p>
+  </div>
+
+  <p class="aw-section-title">How to introduce the Mediterranean pattern gradually</p>
+  <p>You don't overhaul the kitchen overnight. You migrate it, meal by meal, over weeks and months. The goal is to make Mediterranean eating the path of least resistance in your household — not a declared dietary change that invites debate.</p>
+  <p>Start with the oil swap (always first). Then start cooking one legume-based meal per week — a lentil soup, a chickpea stew, bean tacos. Then add fish twice a week. Then replace the chip bowl with a nut bowl. These are sequence moves, not simultaneous demands.</p>
+
+  <div class="aw-callout">
+    <p><strong>Key principle:</strong> The Mediterranean diet is not about removing things. It's about crowding them out with foods that support the gut-brain axis. The processed options don't have to disappear — they just stop being the default.</p>
+  </div>
+
+  <div class="citations-section">
+    <h3>Citations</h3>
+    <div class="citation-item" data-num="1.">Jacka FN, et al. "A randomised controlled trial of dietary improvement for adults with major depression (the 'SMILES' trial)." <em>BMC Medicine.</em> 2017.</div>
+    <div class="citation-item" data-num="2.">Psaltopoulou T, et al. "Mediterranean diet, stroke, cognitive impairment, and depression." <em>Ann Neurol.</em> 2013.</div>
+    <div class="citation-item" data-num="3.">Opie RS, et al. "Dietary recommendations for the prevention of depression." <em>Nutr Neurosci.</em> 2017.</div>
+    <div class="citation-item" data-num="4.">Martínez-González MA, et al. "Benefits of the Mediterranean Diet: Insights From the PREDIMED Study." <em>Prog Cardiovasc Dis.</em> 2015.</div>
+  </div>
+</div>
+</div>
+
+<!-- === BLUE ZONES === -->
+<div id="art-bluezones" class="article-content">
+<div class="aw-article">
+  <h1>Blue Zones — What the World's Healthiest Communities Eat</h1>
+  <div class="article-intro">
+    In five specific regions of the world, people regularly live past 100 with near-zero rates of chronic disease, depression, and anxiety. Sardinia, Italy. Okinawa, Japan. Nicoya Peninsula, Costa Rica. Ikaria, Greece. Loma Linda, California. Researcher Dan Buettner identified these as <a href="https://www.bluezones.com/" target="_blank">Blue Zones</a> — and when he looked at what all five communities had in common, the same patterns kept showing up. <strong>The food commonalities across five completely different cultures, on five different continents, eating five completely different cuisines, are striking. And almost all of them support the gut-brain axis.</strong>
+  </div>
+
+  <p class="aw-section-title">The five Blue Zones</p>
+  <div class="aw-card-grid">
+    <div class="aw-card">
+      <h4>🇮🇹 Sardinia, Italy</h4>
+      <p>Mountain communities with the world's highest concentration of male centenarians. Diet: goat milk, sheep's cheese, flatbread, legumes, red wine, lots of vegetables.</p>
+    </div>
+    <div class="aw-card">
+      <h4>🇯🇵 Okinawa, Japan</h4>
+      <p>Historically among the world's longest-lived women. Diet: sweet potatoes, tofu, bitter melon, seaweed, small amounts of pork, very little sugar or rice.</p>
+    </div>
+    <div class="aw-card">
+      <h4>🇨🇷 Nicoya, Costa Rica</h4>
+      <p>Lowest rate of middle-age mortality in the world. Diet: corn tortillas, black beans, squash, tropical fruits, eggs, small amounts of meat, and local well water high in calcium and magnesium.</p>
+    </div>
+    <div class="aw-card">
+      <h4>🇬🇷 Ikaria, Greece</h4>
+      <p>The island where people "forget to die." Diet: olive oil, legumes, wild greens, potatoes, herbal teas, goat milk, very little meat, periodic fasting.</p>
+    </div>
+    <div class="aw-card">
+      <h4>🇺🇸 Loma Linda, California</h4>
+      <p>Seventh-day Adventist community. Diet: predominantly plant-based, nuts, legumes, whole grains, water as primary beverage. No alcohol or tobacco.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">What all five have in common — the food patterns</p>
+  <p>Despite completely different cultures, ingredients, and cuisines, these five communities share the following food patterns:</p>
+  <ul>
+    <li><strong>Legumes as a daily staple.</strong> Every Blue Zone eats beans, lentils, or other legumes at nearly every meal. This is the single most consistent finding across all five communities. Legumes are the prebiotic fiber engine — they feed the gut microbiome with exactly the compounds it needs for neurotransmitter production.</li>
+    <li><strong>Plants dominate the plate.</strong> Meat is present in most Blue Zones but eaten in small amounts infrequently — as a flavoring or occasional meal, not the center of daily eating.</li>
+    <li><strong>No ultra-processed food.</strong> This is the most important pattern. Ultra-processed food is essentially absent from traditional Blue Zone diets. Not because they're "strict" — it simply wasn't available when the longevity patterns were established, and the communities that maintained traditional eating kept the outcomes.</li>
+    <li><strong>Food is local and seasonal.</strong> Wild greens in Ikaria. Sweet potatoes in Okinawa. Homegrown vegetables in Nicoya. Food that comes from the immediate environment carries more microbial diversity and is less likely to have traveled through industrial processing.</li>
+    <li><strong>Caloric restriction is natural.</strong> Most Blue Zone communities eat until they're about 80% full — not a conscious rule, but a cultural norm. This natural caloric moderation reduces metabolic inflammation.</li>
+  </ul>
+
+  <div class="aw-tip-box">
+    <p><strong>The magnesium connection:</strong> Nicoya's longevity is partly attributed to the local well water, which is exceptionally high in calcium and magnesium. Magnesium is involved in over 300 enzymatic reactions — and is one of the most consistently depleted minerals in people with anxiety disorders. Real food sources of magnesium: leafy greens, legumes, nuts, seeds, whole grains.</p>
+  </div>
+
+  <p class="aw-section-title">The Okinawan principle — Hara Hachi Bu</p>
+  <p>Okinawans follow a Confucian principle called <em>Hara Hachi Bu</em> — eat until you are 80% full. Not a diet rule imposed from outside. A cultural habit internalized from childhood. The result: consistent caloric moderation without restriction, and near-zero obesity in traditional communities.</p>
+  <p>The relevance for the anxious nervous system: chronic overeating creates metabolic stress and systemic inflammation. Blood sugar management becomes easier when portions are naturally moderate. The post-meal heaviness that often triggers anxiety (heart rate elevations from digestion, blood pressure shifts) is less pronounced when eating stops before fullness.</p>
+
+  <p class="aw-section-title">What wingmen can take from Blue Zones</p>
+  <p>You're not building a Blue Zone kitchen overnight. But the core principles translate directly to practical wingman moves:</p>
+  <div class="wingman-step">
+    <div class="wingman-step-num">1</div>
+    <div class="wingman-step-body">
+      <h4>Put legumes in something every day</h4>
+      <p>Add chickpeas to a salad. Make lentil soup once a week. Switch to bean-based pasta. This single habit delivers more gut-microbiome benefit than almost any supplement on the market.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">2</div>
+    <div class="wingman-step-body">
+      <h4>Treat meat as a flavoring, not a centerpiece</h4>
+      <p>This doesn't require going vegetarian. It means building meals around plants and letting meat be one component rather than the main event. Less meat = more room for the foods that feed the microbiome.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">3</div>
+    <div class="wingman-step-body">
+      <h4>Slow down meals</h4>
+      <p>The gut-brain axis sends satiety signals slowly — it takes about 20 minutes for fullness signals to reach the brain. Eating slower naturally reduces overeating and gives the parasympathetic nervous system time to engage digestion properly.</p>
+    </div>
+  </div>
+
+  <div class="aw-callout">
+    <p><strong>The Blue Zone insight for wingmen:</strong> These communities aren't following rules. They're living in environments where the healthy choice is the default choice. Your job is to build that environment in your own kitchen — where whole food, legumes, plants, and good oils are what's there. The nervous system will respond whether or not anyone consciously credits the food.</p>
+  </div>
+
+  <div class="citations-section">
+    <h3>Citations</h3>
+    <div class="citation-item" data-num="1.">Buettner D. <em>The Blue Zones: 9 Lessons for Living Longer From the People Who've Lived the Longest.</em> National Geographic, 2008.</div>
+    <div class="citation-item" data-num="2.">Willcox BJ, et al. "Caloric restriction, the traditional Okinawan diet, and healthy aging." <em>Ann N Y Acad Sci.</em> 2007.</div>
+    <div class="citation-item" data-num="3.">Trichopoulou A, et al. "Adherence to a Mediterranean diet and survival in a Greek population." <em>N Engl J Med.</em> 2003.</div>
+    <div class="citation-item" data-num="4.">Fraser GE. "Associations between diet and cancer, ischemic heart disease, and all-cause mortality in non-Hispanic white California Seventh-day Adventists." <em>Am J Clin Nutr.</em> 1999.</div>
+  </div>
+</div>
+</div>
+
+<!-- === MEDICINAL SPICES === -->
+<div id="art-spices" class="article-content">
+<div class="aw-article">
+  <h1>Medicinal Spices & Bioavailability</h1>
+  <div class="article-intro">
+    Turmeric is everywhere right now. Golden lattes, supplements, wellness content. And most of it is completely useless, because nobody's talking about the one thing that determines whether turmeric actually does anything: <strong>you need black pepper.</strong> Without piperine — the active compound in black pepper — your body absorbs less than 5% of turmeric's active ingredient. With black pepper, absorption increases by up to 2,000%. That's the whole game with medicinal spices. It's not just what you use. It's how you use it, what you pair it with, and how you cook it. This is the bioavailability guide the wellness industry doesn't bother to explain.
+  </div>
+
+  <p class="aw-section-title">Why spices — and why this is Pillar 1</p>
+  <p>Medicinal spices work at the intersection of the gut microbiome, <span class="tooltip-trigger" data-tip="Systemic inflammation is a chronic low-grade immune activation that damages the gut lining, disrupts neurotransmitter production, and is strongly associated with anxiety and depression in clinical research.">systemic inflammation</span>, and neurotransmitter precursor production. The compounds in spices like turmeric, ginger, and rosemary have documented anti-inflammatory, neuroprotective, and anxiolytic effects. They're not miracle cures. They're consistent, daily-use compounds that support the gut-brain axis when used correctly.</p>
+
+  <p class="aw-section-title">The eight spices — and how to use them</p>
+  <div class="spice-grid">
+    <div class="spice-card">
+      <h4>🟡 Turmeric</h4>
+      <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/" target="_blank">Curcumin</a> is the active compound. Anti-inflammatory, neuroprotective, and has demonstrated antidepressant effects in clinical trials.</p>
+      <p class="spice-pair">✦ Always pair with black pepper + a fat source (oil, coconut milk). This combination maximizes absorption dramatically.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🫚 Ginger</h4>
+      <p>Anti-nausea, anti-inflammatory, supports gut motility, and has demonstrated anxiolytic properties. Works on the gut-brain axis directly.</p>
+      <p class="spice-pair">✦ Fresh is most bioavailable. Good in hot water as tea, stir-fries, and smoothies. Heat doesn't destroy gingerols.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🍂 Cinnamon</h4>
+      <p>Blood sugar regulation is the main mechanism. Stable blood sugar = stable mood. Blood sugar crashes are a significant panic attack trigger.</p>
+      <p class="spice-pair">✦ Ceylon cinnamon preferred over cassia for daily use. Add to oatmeal, coffee, smoothies.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🌿 Oregano</h4>
+      <p>Potent antifungal and antimicrobial effects support microbiome balance. Rich in polyphenols that feed beneficial gut bacteria.</p>
+      <p class="spice-pair">✦ Use generously in cooking. Oil of oregano is more concentrated — use sparingly.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🧄 Garlic</h4>
+      <p>Prebiotic fiber (FOS) feeds beneficial bacteria. Allicin has antimicrobial properties that support microbiome balance.</p>
+      <p class="spice-pair">✦ Crush and let sit 10 minutes before cooking — activates allicin enzymatically. Raw is most potent.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🌲 Rosemary</h4>
+      <p>Rosmarinic acid inhibits the enzyme that breaks down GABA — extending the calming effect of the brain's natural inhibitory neurotransmitter.</p>
+      <p class="spice-pair">✦ Both culinary and aromatherapy uses are documented. Add to roasted vegetables, meats, oils.</p>
+    </div>
+    <div class="spice-card">
+      <h4>🫘 Cumin</h4>
+      <p>Supports digestive enzyme production, reduces bloating, and has demonstrated anti-anxiety effects in animal models.</p>
+      <p class="spice-pair">✦ Toast whole seeds before grinding for maximum volatile oil release. Essential in gut-supportive cooking.</p>
+    </div>
+    <div class="spice-card">
+      <h4>⚫ Black Pepper</h4>
+      <p>Piperine enhances absorption of multiple compounds — not just turmeric. One of the most important bioavailability tools in the kitchen.</p>
+      <p class="spice-pair">✦ Freshly ground is more potent than pre-ground. Use liberally, with everything.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">The synergy principle</p>
+  <p>These spices work better together than alone. The fat-soluble compounds in turmeric, rosemary, and oregano all benefit from being cooked in olive oil or coconut oil. Black pepper enhances multiple compounds. Ginger and turmeric together have compounding anti-inflammatory effects documented in the literature.</p>
+  <p>The practical version: build a daily cooking base of olive oil + garlic + ginger + turmeric + black pepper. This combination hits three or four of these spices at once, every day, in every savory meal. The wingman who makes this their default cooking foundation is quietly building a nervous system support system in every dish.</p>
+
+  <div class="aw-callout">
+    <p><strong>Bioavailability is the whole game.</strong> A supplement that doesn't absorb is just expensive urine. The goal is real food, cooked properly, eaten with fat, with black pepper in the rotation constantly. The body does the rest.</p>
+  </div>
+
+  <div class="citations-section">
+    <h3>Citations</h3>
+    <div class="citation-item" data-num="1.">Shoba G, et al. "Influence of piperine on the pharmacokinetics of curcumin." <em>Planta Med.</em> 1998.</div>
+    <div class="citation-item" data-num="2.">Lopresti AL, et al. "Curcumin for the treatment of major depression." <em>J Affect Disord.</em> 2014.</div>
+    <div class="citation-item" data-num="3.">Bhattacharya SK, et al. "Anxiolytic activity of standardized extract of Zingiber officinale in rats." <em>Phytomedicine.</em> 2008.</div>
+    <div class="citation-item" data-num="4.">Tapsell LC, et al. "Health benefits of herbs and spices." <em>Med J Aust.</em> 2006.</div>
   </div>
 </div>
 </div>
@@ -1119,12 +1178,12 @@
 <div class="aw-article">
   <h1>Pillar 2 — Movement & the Nervous System</h1>
   <div class="article-intro">
-    Panic disorder does something cruel to the relationship between body and movement. The <span class="tooltip-trigger" data-tip="Deconditioning trap: when panic attacks become associated with physical exertion, people avoid exercise to avoid triggering symptoms — which weakens the cardiovascular system, making normal physical sensations (elevated heart rate, breathlessness) feel more alarming, which increases panic risk. A self-reinforcing cycle.">deconditioning trap</span> is real, and it pulls hard. <strong>The physical symptoms of a panic attack — racing heart, shortness of breath, sweating — overlap almost exactly with the physical symptoms of exercise.</strong> So people stop moving. And when they stop moving, their cardiovascular system deconditions, meaning normal everyday exertion starts feeling more alarming. The trap tightens. Movement isn't about fitness here. It's about giving a hypervigilant nervous system somewhere to discharge, and building the kind of neurological brake power that makes panic attacks rarer and less severe.
+    Panic disorder does something cruel to the relationship between body and movement. The <span class="tooltip-trigger" data-tip="Deconditioning trap: when panic attacks become associated with physical exertion, people avoid exercise to avoid triggering symptoms — which weakens the cardiovascular system, making normal physical sensations feel more alarming. A self-reinforcing cycle.">deconditioning trap</span> is real, and it pulls hard. <strong>The physical symptoms of a panic attack — racing heart, shortness of breath, sweating — overlap almost exactly with the physical symptoms of exercise.</strong> So people stop moving. And when they stop moving, their cardiovascular system deconditions, meaning normal everyday exertion starts feeling more alarming. Movement isn't about fitness here. It's about giving a hypervigilant nervous system somewhere to discharge.
   </div>
 
   <p class="aw-section-title">What movement actually does to the nervous system</p>
-  <p>Exercise is one of the most powerful <span class="tooltip-trigger" data-tip="Vagal tone refers to the activity of the vagus nerve, which is the main driver of the parasympathetic nervous system. Higher vagal tone = better ability to return to calm after stress.">vagal tone</span> builders we have. The vagus nerve — the main cable of the parasympathetic nervous system — gets stronger and more responsive with regular physical activity. Higher vagal tone means the nervous system can hit the brakes faster after activation. That's the actual goal: not preventing the alarm from going off, but building better brakes so it stops faster.</p>
-  <p>Movement also releases <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041352/" target="_blank">BDNF (brain-derived neurotrophic factor)</a> — often called "miracle-gro for the brain." BDNF supports neuroplasticity, which is literally the brain's ability to rewire itself. A panic-disordered brain trying to retrain toward calmer threat responses needs neuroplasticity. Movement provides it.</p>
+  <p>Exercise is one of the most powerful <span class="tooltip-trigger" data-tip="Vagal tone refers to the activity of the vagus nerve, which is the main driver of the parasympathetic nervous system. Higher vagal tone = better ability to return to calm after stress.">vagal tone</span> builders we have. The vagus nerve — the main cable of the parasympathetic nervous system — gets stronger and more responsive with regular physical activity. Higher vagal tone means the nervous system can hit the brakes faster after activation.</p>
+  <p>Movement also releases <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041352/" target="_blank">BDNF (brain-derived neurotrophic factor)</a> — often called "miracle-gro for the brain." BDNF supports neuroplasticity — the brain's ability to rewire itself. A panic-disordered brain trying to retrain toward calmer threat responses needs neuroplasticity. Movement provides it.</p>
 
   <div class="aw-card-grid">
     <div class="aw-card">
@@ -1137,7 +1196,7 @@
     </div>
     <div class="aw-card">
       <h4>Interoception training</h4>
-      <p>Gradually reintroducing elevated heart rate in safe, chosen contexts retrains the brain to interpret those sensations as non-threatening. That's desensitization happening naturally.</p>
+      <p>Gradually reintroducing elevated heart rate in safe, chosen contexts retrains the brain to interpret those sensations as non-threatening. Natural desensitization.</p>
     </div>
     <div class="aw-card">
       <h4>Sleep architecture</h4>
@@ -1145,21 +1204,17 @@
     </div>
   </div>
 
-  <p class="aw-section-title">The spectrum of movement — start where they are</p>
-  <p>This is not "go to the gym." The goal is to find the lowest-friction entry point for movement that feels non-threatening, and build from there at whatever pace actually sticks. The spectrum is wide:</p>
-
+  <p class="aw-section-title">The movement spectrum — start where they are</p>
   <div class="aw-tip-box blue">
     <p><strong>Low-intensity anchor points:</strong> Walking (especially in nature), slow stretching, tai chi, gentle yoga, swimming at an easy pace. These activate the parasympathetic nervous system while still providing BDNF and vagal tone benefits. Often the best starting point.</p>
   </div>
-
   <div class="aw-tip-box blue" style="margin-top: 10px;">
-    <p><strong>Progressing intensity over time:</strong> As tolerance builds — meaning the person can exercise without panic-level fear of physical sensations — slowly increasing intensity delivers compounding neurological benefits. But this is weeks-to-months work, not a week.</p>
+    <p><strong>Progressing intensity over time:</strong> As tolerance builds, slowly increasing intensity delivers compounding neurological benefits. Resistance training, HIIT, calisthenics — all become available as the nervous system adjusts. But this is weeks-to-months work, not a week.</p>
   </div>
 
   <p class="aw-section-title">The wingman's role in movement</p>
   <p>You're not a personal trainer. You're a conditions-creator. The wingman's job is to make movement feel natural, available, and non-threatening — without making it a performance or a goal that carries weight.</p>
-  <p>The most effective wingman move is to <strong>invite without agenda</strong>. "I'm going for a walk, want to come?" is fundamentally different from "You should really exercise more." One is an invitation to join a human thing you're already doing. The other puts the panic disorder on the table as the reason, which creates pressure, which is the opposite of helpful.</p>
-  <p>Find what they already love that involves movement. Fishing requires walking to spots. Gardening is sustained physical activity. A slow bike ride to get coffee is movement. The wingman's job is to notice these things and quietly create more conditions for them to happen.</p>
+  <p>The most effective wingman move is to <strong>invite without agenda</strong>. "I'm going for a walk, want to come?" is fundamentally different from "You should really exercise more." One is an invitation to join a human thing you're already doing. The other puts the panic disorder on the table as the reason — which creates pressure, which is the opposite of helpful.</p>
 
   <div class="aw-callout">
     <p><strong>Important note on exercise-induced panic:</strong> Some people with panic disorder experience panic during exercise due to the symptom overlap. If this is happening, don't push through it. Start slower. Ultra-low intensity. Breathwork combined with very light movement. Progress is measured in months, not days.</p>
@@ -1168,10 +1223,9 @@
   <div class="citations-section">
     <h3>Citations</h3>
     <div class="citation-item" data-num="1.">Cotman CW, Berchtold NC. "Exercise: a behavioral intervention to enhance brain health and plasticity." <em>Trends Neurosci.</em> 2002.</div>
-    <div class="citation-item" data-num="2.">Herring MP, et al. "The effect of exercise training on anxiety symptoms among patients." <em>Arch Intern Med.</em> 2010.</div>
-    <div class="citation-item" data-num="3.">Brené S, et al. "Running is rewarding and antidepressive." <em>Physiol Behav.</em> 2007.</div>
-    <div class="citation-item" data-num="4.">Porges SW. <em>The Polyvagal Theory.</em> Norton, 2011.</div>
-    <div class="citation-item" data-num="5.">Stubbs B, et al. "An examination of the anxiolytic effects of exercise for people with anxiety and stress-related disorders." <em>Psychiatry Res.</em> 2017.</div>
+    <div class="citation-item" data-num="2.">Herring MP, et al. "The effect of exercise training on anxiety symptoms." <em>Arch Intern Med.</em> 2010.</div>
+    <div class="citation-item" data-num="3.">Porges SW. <em>The Polyvagal Theory.</em> Norton, 2011.</div>
+    <div class="citation-item" data-num="4.">Stubbs B, et al. "An examination of the anxiolytic effects of exercise for people with anxiety." <em>Psychiatry Res.</em> 2017.</div>
   </div>
 </div>
 </div>
@@ -1181,15 +1235,14 @@
 <div class="aw-article">
   <h1>Pillar 3 — Environmental Design & Sensory State Management</h1>
   <div class="article-intro">
-    Let's be clear about what this pillar is not. It's not sitting cross-legged on a cushion breathing through your nose. It's not an app with rain sounds. It's not a wellness trend. <strong>Pillar 3 is continuous sensory state management — the deliberate, ongoing adjustment of five environmental channels to support a calmer nervous system baseline throughout the entire day.</strong> The wingman's role here is quiet, consistent, and remarkably powerful. You adjust the environment around the person. They benefit whether or not they know you're doing it.
+    Let's be clear about what this pillar is not. It's not sitting cross-legged on a cushion breathing through your nose. It's not an app with rain sounds. <strong>Pillar 3 is continuous sensory state management — the deliberate, ongoing adjustment of five environmental channels to support a calmer nervous system baseline throughout the entire day.</strong> The wingman's role here is quiet, consistent, and remarkably powerful. You adjust the environment around the person. They benefit whether or not they know you're doing it.
   </div>
 
   <p class="aw-section-title">Why environment matters to a panic-disordered nervous system</p>
-  <p>The <span class="tooltip-trigger" data-tip="The amygdala processes sensory input and flags potential threats before the conscious brain has a chance to evaluate them rationally. This is why smell, sound, and light can trigger anxiety responses before you even know why.">amygdala</span> processes sensory input directly — before the rational brain gets involved. A specific scent can activate a threat memory. A chaotic soundscape can push the nervous system toward hypervigilance. Harsh, flickering overhead lighting shifts autonomic state. These aren't metaphors. They're documented neurological mechanisms.</p>
-  <p>A hypervigilant nervous system is already scanning for threats 24/7. It doesn't need help staying alert. It needs the opposite — an environment that <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5871151/" target="_blank">signals safety through multiple sensory channels simultaneously</a>. That's what Pillar 3 builds. Not in one grand gesture, but in dozens of small, continuous adjustments across a day.</p>
+  <p>The <span class="tooltip-trigger" data-tip="The amygdala processes sensory input directly — before the rational brain gets involved. This is why smell, sound, and light can trigger anxiety responses before you even know why.">amygdala</span> processes sensory input directly — before the rational brain gets involved. A specific scent can activate a threat memory. A chaotic soundscape can push the nervous system toward hypervigilance. Harsh, flickering overhead lighting shifts autonomic state. These aren't metaphors. They're documented neurological mechanisms.</p>
+  <p>A hypervigilant nervous system is already scanning for threats 24/7. It needs an environment that <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5871151/" target="_blank">signals safety through multiple sensory channels simultaneously</a>. Not in one grand gesture, but in dozens of small, continuous adjustments across a day.</p>
 
   <p class="aw-section-title">The five channels</p>
-
   <div class="sensory-grid">
     <div class="sensory-card">
       <div class="sensory-icon">🌿</div>
@@ -1204,7 +1257,7 @@
     <div class="sensory-card">
       <div class="sensory-icon">💡</div>
       <h4>Light</h4>
-      <p>Bright overhead fluorescents are alerting. Warm, indirect, dimmable light supports calm. Circadian-aligned light exposure improves sleep architecture.</p>
+      <p>Bright overhead fluorescents are alerting. Warm, indirect, dimmable light supports calm. Circadian-aligned light improves sleep architecture.</p>
     </div>
     <div class="sensory-card">
       <div class="sensory-icon">🛋️</div>
@@ -1214,29 +1267,28 @@
     <div class="sensory-card">
       <div class="sensory-icon">💨</div>
       <h4>Air Quality</h4>
-      <p>CO₂ buildup in poorly ventilated spaces measurably increases anxiety. Plants, open windows, air purifiers. Stale air is a real nervous system stressor.</p>
+      <p>CO₂ buildup in poorly ventilated spaces measurably increases anxiety. Plants, open windows, air purifiers all contribute to baseline calm.</p>
     </div>
   </div>
 
   <p class="aw-section-title">The wingman's approach: invisible and continuous</p>
-  <p>Here's the key framing: you're adjusting the thermostat. You don't announce when you change the temperature — you just change it, and everyone benefits. Pillar 3 works exactly the same way.</p>
-  <p>This isn't about secretly manipulating someone. It's about being the person who notices that the TV volume is making the dog anxious and probably isn't helping anyone, and just... turning it down. It's noticing that the kitchen overhead light is harsh and flickering and switching on a lamp. These are normal, unremarkable things to do in a home. The difference is doing them with awareness of the nervous system impact.</p>
+  <p>You're adjusting the thermostat. You don't announce when you change the temperature — you just change it, and everyone benefits. Pillar 3 works the same way. Turn the TV down. Switch on a lamp. Run a diffuser. These are normal, unremarkable things to do in a home. The difference is doing them with awareness of the nervous system impact.</p>
 
   <div class="aw-tip-box purple">
-    <p><strong>Scent is the fastest channel to work with.</strong> Olfaction bypasses the rational brain entirely and connects directly to the limbic system — the emotional processing center. A lavender diffuser running in the background isn't a spa indulgence. It's a nervous system intervention that requires zero participation from the person you're supporting.</p>
+    <p><strong>Scent is the fastest channel to work with.</strong> Olfaction bypasses the rational brain entirely and connects directly to the limbic system. A lavender diffuser running in the background isn't a spa indulgence. It's a nervous system intervention that requires zero participation from the person you're supporting.</p>
   </div>
 
   <p class="aw-section-title">Flow states are Pillar 3</p>
-  <p>Every person has activities that put them in a <span class="tooltip-trigger" data-tip="Flow state: a mental state of complete absorption in a task where the self-conscious mind quiets. Neurologically associated with reduced amygdala activity and increased prefrontal engagement. Effective at interrupting anxiety spirals.">flow state</span>. Woodworking. Fishing. Cooking a complex meal. Gardening. Playing guitar. Driving a long empty road with music on. That flow state IS the meditative state. The nervous system quiets. The threat-scanner takes a break. The wingman's job is to notice what creates that state for this specific person — and quietly protect time for it and create conditions where it happens more.</p>
+  <p>Every person has activities that put them in a <span class="tooltip-trigger" data-tip="Flow state: a mental state of complete absorption in a task where the self-conscious mind quiets. Neurologically associated with reduced amygdala activity. Effective at interrupting anxiety spirals.">flow state</span>. Woodworking. Fishing. Cooking a complex meal. Gardening. Playing guitar. Driving a long empty road with music on. That flow state IS the meditative state. The wingman's job is to notice what creates that state for this specific person — and protect time for it.</p>
 
   <div class="aw-callout">
-    <p><strong>The key principle:</strong> You are not managing someone with panic disorder. You are managing the environment around them. A thermostat doesn't argue with the person in the room about whether they should be cold. It just adjusts. That's your job here — quiet, continuous, effective adjustment. The nervous system doesn't care whether the calm environment was deliberate or accidental. It just responds.</p>
+    <p><strong>The key principle:</strong> You are not managing someone with panic disorder. You are managing the environment around them. A thermostat doesn't argue with the person in the room about whether they should be cold. It just adjusts. That's your job here — quiet, continuous, effective adjustment.</p>
   </div>
 
   <div class="citations-section">
     <h3>Citations</h3>
-    <div class="citation-item" data-num="1.">Cajochen C, et al. "High sensitivity of human melatonin, alertness, thermoregulation, and heart rate to short wavelength light." <em>J Clin Endocrinol Metab.</em> 2000.</div>
-    <div class="citation-item" data-num="2.">Lehrner J, et al. "Ambient odors of orange and lavender reduce anxiety and improve mood in a dental office." <em>Physiol Behav.</em> 2005.</div>
+    <div class="citation-item" data-num="1.">Cajochen C, et al. "High sensitivity of human melatonin, alertness, and heart rate to short wavelength light." <em>J Clin Endocrinol Metab.</em> 2000.</div>
+    <div class="citation-item" data-num="2.">Lehrner J, et al. "Ambient odors of orange and lavender reduce anxiety and improve mood." <em>Physiol Behav.</em> 2005.</div>
     <div class="citation-item" data-num="3.">Hygge S, Knez I. "Effects of noise, heat and indoor lighting on cognitive performance and self-reported affect." <em>J Environ Psychol.</em> 2001.</div>
     <div class="citation-item" data-num="4.">Csikszentmihalyi M. <em>Flow: The Psychology of Optimal Experience.</em> Harper & Row, 1990.</div>
     <div class="citation-item" data-num="5.">Porges SW. "The polyvagal perspective." <em>Biol Psychol.</em> 2007.</div>
@@ -1244,77 +1296,143 @@
 </div>
 </div>
 
-<!-- === SPICES === -->
-<div id="art-spices" class="article-content">
+<!-- === PILLAR 4: WINGMAN FRAMEWORK === -->
+<div id="art-p4" class="article-content">
 <div class="aw-article">
-  <h1>Medicinal Spices & Bioavailability — Bonus Deep Dive</h1>
+  <h1>The Wingman Framework — How to Apply All Three Pillars Without Making It the Topic</h1>
   <div class="article-intro">
-    Turmeric is everywhere right now. Golden lattes, supplements, wellness content. And most of it is completely useless, because nobody's talking about the one thing that determines whether turmeric actually does anything: <strong>you need black pepper.</strong> Without piperine — the active compound in black pepper — your body absorbs less than 5% of turmeric's active ingredient. With black pepper, absorption increases by up to 2,000%. That's the whole game with medicinal spices. It's not just what you use. It's how you use it, what you pair it with, and how you cook it. This is the bioavailability guide the wellness industry doesn't bother to explain.
+    There is a model that got this right long before Anxiety Wingman existed. Al-Anon — the support community for families and friends of people with alcoholism — figured out something the medical system hadn't: <strong>the people surrounding someone in crisis need their own framework, their own support, and their own understanding of how to help without making things worse.</strong> The Wingman Framework is Chazza Chi's version of that for panic disorder. You're not treating someone. You're not managing them. You're learning how to be in their life in a way that makes the environment around them — nutritionally, physically, and sensorially — quietly better. Without pressure. Without confrontation. Without making panic disorder the daily topic.
   </div>
 
-  <p class="aw-section-title">Why spices — and why this is Pillar 1</p>
-  <p>Medicinal spices work at the intersection of the gut microbiome, <span class="tooltip-trigger" data-tip="Systemic inflammation is a chronic low-grade immune activation that damages the gut lining, disrupts neurotransmitter production, and is strongly associated with anxiety and depression in clinical research.">systemic inflammation</span>, and neurotransmitter precursor production. The compounds in spices like turmeric, ginger, and rosemary have documented anti-inflammatory, neuroprotective, and anxiolytic effects. They're not miracle cures. They're consistent, daily-use compounds that support the gut-brain axis when used correctly — meaning with proper bioavailability.</p>
+  <p class="aw-section-title">The Al-Anon parallel — why this model works</p>
+  <p>When someone struggles with alcoholism, their loved ones often make predictable mistakes — trying to control the behavior, covering up consequences, confronting repeatedly, becoming so focused on the person's problem that they lose themselves. Al-Anon teaches a different approach: understand what you can and cannot control, support the person without enabling the behavior, and maintain your own wellbeing while doing so.</p>
+  <p>Panic disorder creates a strikingly similar dynamic for the people around the sufferer. The loved one walks on eggshells. They avoid situations that might "set it off." They either try to push the person through avoidance or they accommodate it completely. Both approaches tend to make the disorder larger and more present in the relationship. The Wingman Framework teaches a third path.</p>
 
-  <p class="aw-section-title">The eight spices — and how to use them</p>
+  <div class="aw-tip-box teal">
+    <p><strong>Core principle:</strong> Your job is not to fix panic disorder. It is to adjust the environment — nutritional, physical, and sensory — in ways that support a calmer nervous system baseline. The nervous system will respond whether or not the person is consciously participating. Your work happens mostly in the background.</p>
+  </div>
 
-  <div class="spice-grid">
-    <div class="spice-card">
-      <h4>🟡 Turmeric</h4>
-      <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/" target="_blank">Curcumin</a> is the active compound. Anti-inflammatory, neuroprotective, and has demonstrated antidepressant effects in clinical trials.</p>
-      <p class="spice-pair">✦ Always pair with black pepper (piperine) + a fat source (oil, coconut milk). This combination maximizes absorption dramatically.</p>
+  <p class="aw-section-title">Applying Pillar 1 as a wingman — the kitchen is your territory</p>
+  <p>The person with panic disorder does not need to know you're changing the cooking oil, introducing kefir into smoothies, or adding more garlic to the food. The gut-brain axis does not require conscious participation. It responds to what it's fed regardless of whether the person eating is thinking about it.</p>
+  <p>The wingman's kitchen strategy is to change what's available and how things are cooked — not to announce a dietary overhaul or explain that you're trying to help their anxiety. Announcements invite resistance. Quiet upgrades just happen.</p>
+
+  <div class="wingman-step">
+    <div class="wingman-step-num">1</div>
+    <div class="wingman-step-body">
+      <h4>Change the oils first</h4>
+      <p>Switch to extra virgin olive oil and avocado oil across all cooking. No announcement. No explanation. Just change what's in the pan. This alone changes the inflammatory profile of every meal cooked at home.</p>
     </div>
-    <div class="spice-card">
-      <h4>🫚 Ginger</h4>
-      <p>Anti-nausea, anti-inflammatory, supports gut motility, and has demonstrated anxiolytic properties. Works on the gut-brain axis directly.</p>
-      <p class="spice-pair">✦ Fresh is most bioavailable. Good in hot water as tea, in stir-fries, and blended into smoothies. Heat doesn't destroy gingerols.</p>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">2</div>
+    <div class="wingman-step-body">
+      <h4>Add medicinal spices to the cooking base</h4>
+      <p>Build a daily cooking base of olive oil, garlic, ginger, turmeric, and black pepper into savory meals. These go in while cooking — they don't change the flavor profile dramatically, but they change the biochemical profile significantly.</p>
     </div>
-    <div class="spice-card">
-      <h4>🍂 Cinnamon</h4>
-      <p>Blood sugar regulation is the main mechanism. Stable blood sugar = stable mood. Blood sugar crashes are a significant panic attack trigger for many people.</p>
-      <p class="spice-pair">✦ Ceylon cinnamon preferred over cassia for daily use. Add to oatmeal, coffee, smoothies. A fat source improves absorption of cinnamaldehyde.</p>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">3</div>
+    <div class="wingman-step-body">
+      <h4>Introduce fermented foods quietly</h4>
+      <p>Kefir in smoothies. Sauerkraut as a side. Miso in soups. These can be incorporated without comment and without change to the eating experience — but they rebuild microbiome diversity over time.</p>
     </div>
-    <div class="spice-card">
-      <h4>🌿 Oregano</h4>
-      <p>Potent antifungal and antimicrobial effects support microbiome balance. Rich in polyphenols that feed beneficial gut bacteria.</p>
-      <p class="spice-pair">✦ Use generously in cooking. Oil of oregano is more concentrated — use sparingly. Add to everything savory.</p>
-    </div>
-    <div class="spice-card">
-      <h4>🧄 Garlic</h4>
-      <p>Prebiotic fiber (FOS) feeds beneficial bacteria. Allicin has antimicrobial properties that support microbiome balance. Documented cardiovascular benefits.</p>
-      <p class="spice-pair">✦ Crush and let sit 10 minutes before cooking — this activates allicin enzymatically. Raw is most potent. Roasting is second best.</p>
-    </div>
-    <div class="spice-card">
-      <h4>🌲 Rosemary</h4>
-      <p>Rosmarinic acid inhibits the enzyme that breaks down GABA — meaning rosemary effectively extends the calming effect of your brain's natural inhibitory neurotransmitter.</p>
-      <p class="spice-pair">✦ Both culinary and aromatherapy uses are documented. Add to roasted vegetables, meats, oils. Even the scent has cognitive effects.</p>
-    </div>
-    <div class="spice-card">
-      <h4>🫘 Cumin</h4>
-      <p>Supports digestive enzyme production, reduces bloating, and has demonstrated anti-anxiety effects in animal models. Underrated spice.</p>
-      <p class="spice-pair">✦ Toast whole seeds before grinding for maximum volatile oil release. Essential in gut-supportive cooking — pairs with legumes and grains particularly well.</p>
-    </div>
-    <div class="spice-card">
-      <h4>⚫ Black Pepper</h4>
-      <p>Piperine is one of the most important bioavailability enhancers in the kitchen. It doesn't just work with turmeric — it enhances absorption of several other compounds too.</p>
-      <p class="spice-pair">✦ Freshly ground is more potent than pre-ground. Use liberally. The "a little" approach to black pepper is the wrong approach.</p>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">4</div>
+    <div class="wingman-step-body">
+      <h4>Change what's available to snack on</h4>
+      <p>Put out a bowl of mixed nuts. Keep berries washed and visible. Replace the processed snacks with options that support blood sugar stability. What's there gets eaten. What isn't, doesn't.</p>
     </div>
   </div>
 
-  <p class="aw-section-title">The synergy principle</p>
-  <p>These spices work better together than alone. The fat-soluble compounds in turmeric, rosemary, and oregano all benefit from being cooked in olive oil or coconut oil. Black pepper enhances multiple compounds. Ginger and turmeric together have compounding anti-inflammatory effects documented in the literature.</p>
-  <p>The practical version: build a daily cooking base of olive oil + garlic + ginger + turmeric + black pepper. This combination hits three or four of these spices at once, every day, in every savory meal. The wingman who makes this their default cooking foundation is quietly building a nervous system support system in every dish.</p>
+  <p class="aw-section-title">Applying Pillar 2 as a wingman — invitations, not prescriptions</p>
+  <p>The worst thing a wingman can do in the movement pillar is say "you need to exercise more" or "the doctor says you should get out and walk." Both statements put the panic disorder on the table as the reason, create a performance expectation, and generate exactly the kind of pressure that makes avoidance worse.</p>
+  <p>The wingman approach is to create natural movement opportunities that don't require the person to self-identify as someone who needs to move more.</p>
+
+  <div class="aw-card-grid">
+    <div class="aw-card">
+      <h4>Invite yourself first</h4>
+      <p>"I'm going for a walk" — then pause. Not "do you want to come?" with expectation. Just state what you're doing. Let them choose without pressure.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Create equipment availability</h4>
+      <p>A treadmill in the house that's "yours" is available to them. Resistance bands in the living room. A yoga mat left out. The barrier to entry drops when the equipment is already there.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Notice what they already love</h4>
+      <p>Fishing involves walking. Gardening is sustained physical movement. A trip to a farmers market is movement. Find what they already want to do and create conditions for more of it.</p>
+    </div>
+    <div class="aw-card">
+      <h4>Move with them, not at them</h4>
+      <p>If they'll walk with you, walk with you — not behind them coaching. If they'll stretch while watching TV, do it together. Side-by-side movement has less performance anxiety than movement as a prescribed activity.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">Applying Pillar 3 as a wingman — managing the environment they live in</p>
+  <p>Environment management is the wingman's highest-leverage pillar because it requires the least participation from the person with panic disorder. The nervous system responds to sensory input whether or not the person knows why.</p>
+
+  <div class="wingman-step">
+    <div class="wingman-step-num">1</div>
+    <div class="wingman-step-body">
+      <h4>Start a diffuser — don't explain it</h4>
+      <p>Lavender, bergamot, or cedarwood running in the background. If they like the scent, great. If they notice it at all, they'll probably just say it smells nice. You don't have to explain that you're running an olfactory nervous system intervention.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">2</div>
+    <div class="wingman-step-body">
+      <h4>Change the lighting gradually</h4>
+      <p>Replace overhead fluorescents with warm-toned LED bulbs. Add lamps. Use dimmers in the evening. The nervous system responds to lighting shifts over weeks — this is background infrastructure, not a conversation.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">3</div>
+    <div class="wingman-step-body">
+      <h4>Manage the sound environment</h4>
+      <p>Turn down the TV. Add soft background music or nature sounds. If they live somewhere noisy, look into white noise or a sound machine. What the ears are absorbing all day affects the threat system continuously.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">4</div>
+    <div class="wingman-step-body">
+      <h4>Reduce clutter in their primary space</h4>
+      <p>Visual clutter creates cognitive load and low-level stress in a nervous system that's already hypervigilant. Decluttering their immediate environment — the bedroom, the main living area — lowers the baseline sensory noise without any direct intervention on the person.</p>
+    </div>
+  </div>
+  <div class="wingman-step">
+    <div class="wingman-step-num">5</div>
+    <div class="wingman-step-body">
+      <h4>Improve air quality</h4>
+      <p>Open windows when possible. Add plants — snake plants and pothos are particularly effective at improving air quality indoors. Consider an air purifier for bedrooms. CO₂ buildup in poorly ventilated spaces measurably increases anxiety. Fresh air is literally a nervous system intervention.</p>
+    </div>
+  </div>
+
+  <p class="aw-section-title">What NOT to do — the wingman's critical errors</p>
+  <div class="aw-warning-box">
+    <p><strong>Never force, push, or make panic disorder the topic.</strong> "You need to go outside." "Why won't you try this?" "I read that exercise cures anxiety." These statements put the disorder at the center of the interaction, create shame and pressure, and make avoidance worse. Resistance is not stubbornness — it's a protective response from a nervous system that's already overwhelmed.</p>
+  </div>
+  <div class="aw-warning-box" style="margin-top: 12px;">
+    <p><strong>Never enable avoidance by accommodating every trigger.</strong> Saying "we won't go there because it might cause a panic attack" trains the nervous system that avoidance works. The wingman's goal is to reduce the difficulty of engaging with life — not to make it possible to avoid everything indefinitely.</p>
+  </div>
+  <div class="aw-warning-box" style="margin-top: 12px;">
+    <p><strong>Never lose yourself in it.</strong> The wingman who abandons their own needs, social life, and wellbeing entirely in service of someone with panic disorder is not helping — they're creating a co-dependent dynamic that adds relational stress to the equation. Maintain your own life. Model that it's possible to function. This is part of the support.</p>
+  </div>
+
+  <p class="aw-section-title">Managing your own wellbeing as a wingman</p>
+  <p>This is the part nobody talks about. Living with someone with panic disorder is genuinely hard. The unpredictability, the limitation of activities, the emotional volatility that comes with constant threat-system activation — all of this affects you. You absorb it. You adapt around it. And if you don't have your own support, your own understanding, and your own outlets, you burn out — which helps no one.</p>
+  <p>Apply the three pillars to yourself. Your nutrition matters. Your movement matters. Your environment matters. A wingman who is well-nourished, physically active, and living in a calm environment has significantly more capacity to support someone else than one who isn't.</p>
 
   <div class="aw-callout">
-    <p><strong>Bioavailability is the whole game.</strong> A supplement that doesn't absorb is just expensive urine. The goal is real food, cooked properly, eaten with fat, with black pepper in the rotation constantly. The body does the rest.</p>
+    <p><strong>The Wingman truth:</strong> You cannot pour from an empty cup. The most important thing you can do for someone with panic disorder is remain stable, healthy, and present yourself. The three pillars aren't just for them. They're for you too — and you applying them to your own life sets an environmental example that carries its own influence.</p>
   </div>
 
   <div class="citations-section">
     <h3>Citations</h3>
-    <div class="citation-item" data-num="1.">Shoba G, et al. "Influence of piperine on the pharmacokinetics of curcumin in animals and human volunteers." <em>Planta Med.</em> 1998.</div>
-    <div class="citation-item" data-num="2.">Lopresti AL, et al. "Curcumin for the treatment of major depression: a randomised, double-blind, placebo controlled study." <em>J Affect Disord.</em> 2014.</div>
-    <div class="citation-item" data-num="3.">Bhattacharya SK, et al. "Anxiolytic activity of standardized extract of Zingiber officinale in rats." <em>Phytomedicine.</em> 2008.</div>
-    <div class="citation-item" data-num="4.">Awad R, et al. "Phytochemical and biological analysis of skullcap (Scutellaria lateriflora L.)." <em>Phytochemistry.</em> 2003. [Rosemary GABA mechanism]</div>
-    <div class="citation-item" data-num="5.">Tapsell LC, et al. "Health benefits of herbs and spices: the past, the present, the future." <em>Med J Aust.</em> 2006.</div>
+    <div class="citation-item" data-num="1.">Al-Anon Family Groups. <em>How Al-Anon Works for Families and Friends of Alcoholics.</em> Al-Anon Family Group Headquarters, 2008.</div>
+    <div class="citation-item" data-num="2.">Craske MG, Barlow DH. <em>Mastery of Your Anxiety and Panic.</em> Oxford University Press, 2007.</div>
+    <div class="citation-item" data-num="3.">Chambless DL, Steketee G. "Expressed emotion and behavior therapy outcome: a prospective study with obsessive-compulsive and agoraphobic outpatients." <em>J Consult Clin Psychol.</em> 1999.</div>
+    <div class="citation-item" data-num="4.">Barlow DH. <em>Anxiety and Its Disorders: The Nature and Treatment of Anxiety and Panic.</em> Guilford Press, 2002.</div>
+    <div class="citation-item" data-num="5.">Porges SW. <em>The Polyvagal Theory: Neurophysiological Foundations of Emotions, Attachment, Communication, and Self-Regulation.</em> Norton, 2011.</div>
   </div>
 </div>
 </div>
@@ -1326,13 +1444,11 @@
   const ANIM_DELAY = 400;
 
   function animateTriangle() {
-    const left  = document.querySelector('.tri-left');
-    const right = document.querySelector('.tri-right');
-    const base  = document.querySelector('.tri-base');
-    const dots  = document.querySelectorAll('.tri-dot');
+    const left   = document.querySelector('.tri-left');
+    const right  = document.querySelector('.tri-right');
+    const base   = document.querySelector('.tri-base');
     const labels = document.querySelectorAll('.tri-label');
 
-    // Animate each side with CSS transition after setting dashoffset to 0
     setTimeout(() => {
       left.style.transition = 'stroke-dashoffset 0.7s ease';
       left.style.strokeDashoffset = '0';
@@ -1358,83 +1474,106 @@
 
   window.addEventListener('DOMContentLoaded', animateTriangle);
 
-  // ---- NAVIGATION ----
-  const articles = {
-    foundation: {
-      id: 'art-foundation',
-      title: 'What Is Chazza Chi',
-      pill: 'Foundation',
-      pillColor: '#e05a1e',
-      pillBg: '#fff0e8'
-    },
-    p1: {
-      id: 'art-p1',
-      title: 'Pillar 1 — Gut Health & the Gut-Brain Axis',
+  // ---- NAVIGATION STATE ----
+  let previousView = 'hub';
+  let currentPillarHub = null;
+
+  const pillarHubMeta = {
+    nutrition: {
+      crumb: 'Pillar 1 — Nutrition',
       pill: 'Nutrition',
-      pillColor: '#2a7d4f',
-      pillBg: '#e8f5ee'
-    },
-    p2: {
-      id: 'art-p2',
-      title: 'Pillar 2 — Movement & the Nervous System',
-      pill: 'Movement',
-      pillColor: '#1565c0',
-      pillBg: '#e3eeff'
-    },
-    p3: {
-      id: 'art-p3',
-      title: 'Pillar 3 — Environmental Design',
-      pill: 'Environment',
-      pillColor: '#6a1b9a',
-      pillBg: '#f3e5ff'
-    },
-    spices: {
-      id: 'art-spices',
-      title: 'Medicinal Spices & Bioavailability',
-      pill: 'Bonus',
       pillColor: '#2a7d4f',
       pillBg: '#e8f5ee'
     }
   };
 
-  function openArticle(key) {
+  const articles = {
+    foundation: { id: 'art-foundation', title: 'What Is Chazza Chi', pill: 'Foundation', pillColor: '#e05a1e', pillBg: '#fff0e8' },
+    p1:         { id: 'art-p1',         title: 'Gut Health & the Gut-Brain Axis', pill: 'Nutrition', pillColor: '#2a7d4f', pillBg: '#e8f5ee' },
+    'whole-foods': { id: 'art-whole-foods', title: 'Whole Foods Philosophy', pill: 'Nutrition', pillColor: '#2a7d4f', pillBg: '#e8f5ee' },
+    mediterranean: { id: 'art-mediterranean', title: 'The Mediterranean Diet', pill: 'Nutrition', pillColor: '#2a7d4f', pillBg: '#e8f5ee' },
+    bluezones:  { id: 'art-bluezones', title: 'Blue Zones', pill: 'Nutrition', pillColor: '#2a7d4f', pillBg: '#e8f5ee' },
+    spices:     { id: 'art-spices',    title: 'Medicinal Spices & Bioavailability', pill: 'Nutrition', pillColor: '#2a7d4f', pillBg: '#e8f5ee' },
+    p2:         { id: 'art-p2',        title: 'Movement & the Nervous System', pill: 'Movement', pillColor: '#1565c0', pillBg: '#e3eeff' },
+    p3:         { id: 'art-p3',        title: 'Environmental Design', pill: 'Environment', pillColor: '#6a1b9a', pillBg: '#f3e5ff' },
+    p4:         { id: 'art-p4',        title: 'The Wingman Framework', pill: 'Wingman', pillColor: '#0d7377', pillBg: '#e0f4f5' }
+  };
+
+  // ---- OPEN PILLAR HUB ----
+  function openPillarHub(pillarKey) {
+    const meta = pillarHubMeta[pillarKey];
+    if (!meta) return;
+
+    document.getElementById('hub-view').classList.remove('active');
+
+    document.querySelectorAll('.pillar-hub-section').forEach(s => s.classList.remove('active'));
+    const section = document.getElementById('pillar-hub-' + pillarKey);
+    if (section) section.classList.add('active');
+
+    document.getElementById('pillar-hub-crumb').textContent = meta.crumb;
+    const pill = document.getElementById('pillar-hub-pill');
+    pill.textContent = meta.pill;
+    pill.style.backgroundColor = meta.pillBg;
+    pill.style.color = meta.pillColor;
+
+    document.getElementById('pillar-hub-view').classList.add('active');
+    currentPillarHub = pillarKey;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ---- OPEN ARTICLE ----
+  function openArticle(key, from = 'hub') {
     const meta = articles[key];
     if (!meta) return;
 
-    // Hide all articles
+    previousView = from;
+
     document.querySelectorAll('.article-content').forEach(a => a.style.display = 'none');
-
-    // Show target
     const target = document.getElementById(meta.id);
-    if (target) {
-      target.style.display = 'block';
-    }
 
-    // Update topbar
     document.getElementById('topbar-crumb-text').textContent = meta.title;
     const pill = document.getElementById('topbar-pill');
     pill.textContent = meta.pill;
     pill.style.backgroundColor = meta.pillBg;
     pill.style.color = meta.pillColor;
 
-    // Mount article into frame
+    const backBtn = document.getElementById('article-back-btn');
+    if (from === 'pillar-hub' && currentPillarHub) {
+      const pillarName = pillarHubMeta[currentPillarHub] ? pillarHubMeta[currentPillarHub].pill : 'Pillar';
+      backBtn.textContent = '← ' + pillarName;
+    } else {
+      backBtn.textContent = '← Hub';
+    }
+
     const frame = document.getElementById('article-frame');
     frame.innerHTML = '';
     if (target) {
       frame.appendChild(target.cloneNode(true));
-      // Show the cloned one
       frame.querySelector('.article-content').style.display = 'block';
     }
 
-    // Switch views
     document.getElementById('hub-view').classList.remove('active');
+    document.getElementById('pillar-hub-view').classList.remove('active');
     document.getElementById('article-view').classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // ---- GO BACK FROM ARTICLE ----
   function goBack() {
     document.getElementById('article-view').classList.remove('active');
+    if (previousView === 'pillar-hub') {
+      document.getElementById('pillar-hub-view').classList.add('active');
+    } else {
+      document.getElementById('hub-view').classList.add('active');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ---- GO BACK FROM PILLAR HUB ----
+  function goBackFromPillarHub() {
+    document.getElementById('pillar-hub-view').classList.remove('active');
     document.getElementById('hub-view').classList.add('active');
+    currentPillarHub = null;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
