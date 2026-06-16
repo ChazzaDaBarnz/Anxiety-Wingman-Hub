@@ -431,6 +431,51 @@
     .section-body { padding: 0 1.4rem 1.6rem; }
     .intro-block { padding: 1.8rem; }
   }
+
+  /* CITATIONS */
+  .cite {
+    font-size: 0.7rem;
+    vertical-align: super;
+    color: var(--teal);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 1px;
+  }
+  .cite:hover { color: var(--amber); }
+  
+  /* BIBLIOGRAPHY */
+  .bibliography {
+    margin-top: 3rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+  }
+  .bibliography h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .bib-item {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+  .bib-num {
+    color: var(--teal);
+    font-weight: 700;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .bib-item a { color: var(--teal); text-decoration: none; }
+  .bib-item a:hover { text-decoration: underline; }
+
 </style>
 </head>
 <body>
@@ -458,19 +503,19 @@
     <div class="hero-stats">
       <div class="stat">
         <span class="stat-number">95%</span>
-        <span class="stat-label">of serotonin made in gut</span>
+        <span class="stat-label">of serotonin made in gut <a href="#ref1" class="cite">[1]</a></span>
       </div>
       <div class="stat">
         <span class="stat-number">500M</span>
-        <span class="stat-label">neurons in your gut</span>
+        <span class="stat-label">neurons in your gut <a href="#ref2" class="cite">[2]</a></span>
       </div>
       <div class="stat">
         <span class="stat-number">80%</span>
-        <span class="stat-label">vagal signals go gut → brain</span>
+        <span class="stat-label">vagal signals go gut → brain <a href="#ref3" class="cite">[3]</a></span>
       </div>
       <div class="stat">
         <span class="stat-number">38T</span>
-        <span class="stat-label">bacteria in your gut</span>
+        <span class="stat-label">bacteria in your gut <a href="#ref4" class="cite">[4]</a></span>
       </div>
     </div>
   </div>
@@ -517,12 +562,12 @@
       <div class="deeper-panel">
         <h4>How Scientists Proved It Goes Both Ways</h4>
         <p>For decades, the assumption was simple: the brain controls the gut. Stress causes stomach problems. That part is true. But the research that changed everything came from germ-free animal studies — mice raised with no gut bacteria at all.</p>
-        <p>These germ-free mice showed drastically abnormal stress responses. When researchers colonized them with bacteria from anxious mice, the germ-free mice became anxious. When they colonized them with bacteria from calm mice, they became calm. The gut microbiome was actively shaping behavior — not just responding to it.</p>
-        <p>In humans, studies have shown that people with irritable bowel syndrome (IBS) have significantly higher rates of anxiety and depression. Not because anxiety causes IBS — but because both conditions often share the same root: a dysregulated gut-brain axis. Fix the gut, and mood often improves. Fix the anxiety, and gut symptoms often improve. The causation runs both directions simultaneously.</p>
+        <p>These germ-free mice showed drastically abnormal stress responses. <a href="#ref6" class="cite">[6]</a> When researchers colonized them with bacteria from anxious mice, the germ-free mice became anxious. When they colonized them with bacteria from calm mice, they became calm. The gut microbiome was actively shaping behavior — not just responding to it.</p>
+        <p>In humans, studies have shown that people with irritable bowel syndrome (IBS) have significantly higher rates of anxiety and depression. <a href="#ref7" class="cite">[7]</a> Not because anxiety causes IBS — but because both conditions often share the same root: a dysregulated gut-brain axis. Fix the gut, and mood often improves. Fix the anxiety, and gut symptoms often improve. The causation runs both directions simultaneously.</p>
         <ul>
           <li>The HPA (hypothalamic-pituitary-adrenal) axis — your stress response system — is heavily influenced by gut microbiota composition</li>
           <li>Gut permeability (leaky gut) increases during psychological stress, allowing bacterial byproducts to enter circulation and trigger systemic inflammation</li>
-          <li>Fecal transplants from humans with depression to germ-free rodents have produced depressive behavior in the animals — the microbiome transferred the mood state</li>
+          <li>Fecal transplants from humans with depression to germ-free rodents have produced depressive behavior <a href="#ref15" class="cite">[15]</a> in the animals — the microbiome transferred the mood state</li>
         </ul>
       </div>
     </div>
@@ -543,7 +588,7 @@
       </div>
     </div>
     <div class="section-body">
-      <p>The enteric nervous system (ENS) is a network of 100 to 500 million neurons embedded in the walls of your gastrointestinal tract — from esophagus to rectum. Scientists call it the "second brain" for a reason: it contains more neurons than your spinal cord, and it can operate completely independently of your brain.</p>
+      <p>The enteric nervous system (ENS) is a network of 100 to 500 million neurons embedded in the walls of your gastrointestinal tract <a href="#ref2" class="cite">[2]</a> — from esophagus to rectum. Scientists call it the "second brain" for a reason: it contains more neurons than your spinal cord, and it can operate completely independently of your brain. <a href="#ref8" class="cite">[8]</a></p>
 
       <p>This isn't a support system for the brain. It's a peer. The ENS runs digestion, regulates gut immune response, and manages local reflex arcs — all without waiting for instruction from above.</p>
 
@@ -557,7 +602,7 @@
         <li>Coordinates peristalsis (the muscular contractions that move food through the digestive tract)</li>
         <li>Regulates enzyme secretion, blood flow to gut tissue, and local immune responses</li>
         <li>Detects nutrients, toxins, and mechanical stretch in the gut wall</li>
-        <li>Uses the same neurotransmitters as the brain — serotonin, dopamine, acetylcholine, norepinephrine, GABA</li>
+        <li>Uses the same neurotransmitters as the brain — serotonin, dopamine, acetylcholine, norepinephrine, GABA <a href="#ref9" class="cite">[9]</a></li>
         <li>Survives and functions even after the vagus nerve is severed — truly independent operation</li>
       </ul>
 
@@ -592,7 +637,7 @@
     <div class="section-body">
       <p>The vagus nerve is the longest cranial nerve in your body — it wanders from your brainstem all the way down through your heart, lungs, and digestive tract. It's the primary physical highway of the gut-brain axis.</p>
 
-      <p>Here's what most people get wrong: they assume the brain is sending instructions down to the gut. In reality, approximately 80% of vagal nerve fibers carry information <em>from</em> the gut <em>to</em> the brain — not the other way around. Your gut is doing most of the talking.</p>
+      <p>Here's what most people get wrong: they assume the brain is sending instructions down to the gut. In reality, approximately 80% of vagal nerve fibers carry information <a href="#ref3" class="cite">[3]</a> <em>from</em> the gut <em>to</em> the brain — not the other way around. Your gut is doing most of the talking.</p>
 
       <div class="callout callout-amber">
         <strong>80% gut → brain.</strong> The vagus nerve is primarily an upward communication line. What's happening in your gut is constantly being reported to your brain — which means gut dysfunction directly shapes how your brain perceives threat, stress, and safety.
@@ -610,12 +655,12 @@
       <h3>Vagal Tone: The Missing Piece</h3>
       <p>Vagal tone refers to how active and responsive your vagus nerve is. High vagal tone means the nerve is functioning well — your body shifts smoothly between stress and recovery. Low vagal tone means the parasympathetic brake is weak, and your nervous system gets stuck in high-alert mode longer than it should.</p>
 
-      <p>People with panic disorder consistently show lower vagal tone and lower heart rate variability. This isn't a permanent condition — vagal tone is trainable. Diet, breathing, exercise, and environment all influence it directly.</p>
+      <p>People with panic disorder consistently show lower vagal tone and lower heart rate variability. <a href="#ref10" class="cite">[10]</a> This isn't a permanent condition — vagal tone is trainable. Diet, breathing, exercise, and environment all influence it directly.</p>
 
       <button class="deeper-trigger" onclick="toggleDeeper(this)"><span class="arrow">▶</span> Go Deeper: How to Improve Vagal Tone Through Diet</button>
       <div class="deeper-panel">
         <h4>The Gut-Vagus-Brain Loop You Can Influence</h4>
-        <p>The vagus nerve doesn't just passively transmit gut signals — it actively monitors the gut environment. Short-chain fatty acids (SCFAs), produced when gut bacteria ferment dietary fiber, directly stimulate vagal afferent neurons in the gut wall. Higher fiber intake → more SCFA production → stronger vagal signaling → better parasympathetic tone.</p>
+        <p>The vagus nerve doesn't just passively transmit gut signals — it actively monitors the gut environment. Short-chain fatty acids (SCFAs), produced when gut bacteria ferment dietary fiber, directly stimulate vagal afferent neurons <a href="#ref11" class="cite">[11]</a> in the gut wall. Higher fiber intake → more SCFA production → stronger vagal signaling → better parasympathetic tone.</p>
         <p>Polyphenols — found in berries, green tea, dark chocolate, and extra virgin olive oil — also influence vagal activity by supporting microbiome diversity and reducing gut inflammation, both of which the vagus nerve monitors and reports upward.</p>
         <p>Practically: a gut full of fermented foods, diverse fiber, and polyphenol-rich plants is sending better signals up the vagus nerve, and a better-fed vagus nerve supports the kind of parasympathetic regulation that helps dampen panic responses. This is Pillar I applied: you're not just eating for energy — you're eating to train your nervous system's recovery capacity.</p>
         <ul>
@@ -653,13 +698,13 @@
       <h3>Key Neurotransmitters Produced or Influenced in the Gut</h3>
 
       <h3>Serotonin</h3>
-      <p>Enterochromaffin cells lining the gut wall produce the vast majority of the body's serotonin. Gut serotonin regulates intestinal movement, bowel function, and sends signals up the vagus nerve. Gut bacteria directly influence how much serotonin these cells produce — dysbiosis reduces serotonin synthesis. Low serotonin is strongly associated with anxiety, depression, and heightened panic response.</p>
+      <p>Enterochromaffin cells lining the gut wall produce the vast majority <a href="#ref1" class="cite">[1]</a> of the body's serotonin. Gut serotonin regulates intestinal movement, bowel function, and sends signals up the vagus nerve. Gut bacteria directly influence how much serotonin these cells produce — dysbiosis reduces serotonin synthesis. Low serotonin is strongly associated with anxiety, depression, and heightened panic response.</p>
 
       <h3>GABA (Gamma-Aminobutyric Acid)</h3>
-      <p>GABA is your brain's primary inhibitory neurotransmitter — the neurochemical brake that calms an overactive nervous system. Certain gut bacteria, particularly <em>Lactobacillus</em> and <em>Bifidobacterium</em> strains, produce GABA directly. Animal studies show that specific probiotic strains reduce anxiety behavior — and that this effect is eliminated when the vagus nerve is cut, confirming the gut-to-brain pathway. Most anti-anxiety medications (benzodiazepines) work by enhancing GABA activity. Your gut bacteria can do this naturally — if the right bacteria are present.</p>
+      <p>GABA is your brain's primary inhibitory neurotransmitter — the neurochemical brake that calms an overactive nervous system. Certain gut bacteria, particularly <em>Lactobacillus</em> and <em>Bifidobacterium</em> strains, produce GABA directly. <a href="#ref12" class="cite">[12]</a> Animal studies show that specific probiotic strains reduce anxiety behavior — and that this effect is eliminated when the vagus nerve is cut <a href="#ref12" class="cite">[12]</a>, confirming the gut-to-brain pathway. Most anti-anxiety medications (benzodiazepines) work by enhancing GABA activity. Your gut bacteria can do this naturally — if the right bacteria are present.</p>
 
       <h3>Dopamine</h3>
-      <p>Approximately 50% of the body's dopamine is produced in the gut. Gut dopamine regulates gut motility and is involved in reward signaling pathways that extend into the brain. Dysbiosis-related reductions in gut dopamine production have been linked to reduced motivation, anhedonia, and worsened mood states.</p>
+      <p>Approximately 50% of the body's dopamine is produced in the gut. <a href="#ref13" class="cite">[13]</a> Gut dopamine regulates gut motility and is involved in reward signaling pathways that extend into the brain. Dysbiosis-related reductions in gut dopamine production have been linked to reduced motivation, anhedonia, and worsened mood states.</p>
 
       <h3>Norepinephrine</h3>
       <p>Some gut bacteria stimulate the production of norepinephrine in the gut. Norepinephrine is the primary catecholamine behind the fight-or-flight response. An overproduction state — which dysbiosis can contribute to — maintains a baseline of physiological alertness that makes panic attacks both more likely and harder to recover from.</p>
@@ -694,7 +739,7 @@
       </div>
     </div>
     <div class="section-body">
-      <p>You are home to approximately 38 trillion microbial cells — bacteria, fungi, archaea, viruses — most of them living in your large intestine. This ecosystem, collectively called the gut microbiome, weighs roughly 2–3 pounds and contains over 1,000 distinct species. It is one of the most complex biological systems we've ever tried to understand.</p>
+      <p>You are home to approximately 38 trillion microbial cells <a href="#ref4" class="cite">[4]</a> — bacteria, fungi, archaea, viruses — most of them living in your large intestine. This ecosystem, collectively called the gut microbiome, weighs roughly 2–3 pounds and contains over 1,000 distinct species. <a href="#ref14" class="cite">[14]</a> It is one of the most complex biological systems we've ever tried to understand.</p>
 
       <p>What we know is enough to fundamentally change how we approach mental health. The microbiome directly influences brain chemistry, immune function, inflammation, hormone regulation, and — critically — the stress and panic response.</p>
 
@@ -722,7 +767,7 @@
         <h4>Specific Bacteria Linked to Anxiety and Panic</h4>
         <p><strong>Lactobacillus rhamnosus:</strong> One of the most studied strains for anxiety. In rodent models, significantly reduces anxiety-like behavior, reduces stress-induced corticosterone, and increases GABA receptor expression in the brain — effects abolished by vagotomy (cutting the vagus nerve), confirming the gut-brain pathway. Human trials have shown reduced cortisol and anxiety scores with supplementation.</p>
         <p><strong>Bifidobacterium longum:</strong> Shown to reduce anxiety-like behavior, lower stress response, and improve cognitive performance under stress in both animal and human studies. Influences the HPA axis (stress response system) directly.</p>
-        <p><strong>Lactobacillus helveticus + Bifidobacterium longum combination:</strong> A randomized, double-blind, placebo-controlled trial showed this combination significantly reduced anxiety and depression scores, reduced urinary cortisol levels, and reduced the neurotic dimension of personality in healthy volunteers.</p>
+        <p><strong>Lactobacillus helveticus + Bifidobacterium longum combination:</strong> A randomized, double-blind, placebo-controlled trial showed this combination significantly reduced anxiety and depression scores <a href="#ref25" class="cite">[25]</a>, reduced urinary cortisol levels, and reduced the neurotic dimension of personality in healthy volunteers.</p>
         <p>Practical note: strains matter, but a diverse microbiome built on fermented foods and high fiber provides a broader base than any single probiotic supplement. Supplements are useful for acute restoration; diet is the long game.</p>
       </div>
     </div>
@@ -751,7 +796,7 @@
       <p>When inflammatory cytokines (signaling proteins like IL-6, TNF-α, and IL-1β) cross the blood-brain barrier or activate brain immune cells (microglia), they directly alter the brain's chemistry and function:</p>
       <ul>
         <li>Reduced serotonin synthesis and availability</li>
-        <li>Increased tryptophan shunting toward the kynurenine pathway (produces compounds linked to depression and neurotoxicity rather than serotonin)</li>
+        <li>Increased tryptophan shunting toward the kynurenine pathway <a href="#ref17" class="cite">[17]</a> (produces compounds linked to depression and neurotoxicity rather than serotonin)</li>
         <li>Heightened amygdala reactivity — the brain's threat-detection center becomes oversensitive</li>
         <li>Impaired prefrontal cortex function — reducing the capacity to regulate emotional responses</li>
         <li>Dysregulated HPA axis — the stress system runs hotter and recovers more slowly</li>
@@ -764,13 +809,13 @@
       <button class="deeper-trigger" onclick="toggleDeeper(this)"><span class="arrow">▶</span> Go Deeper: Anti-Inflammatory Diet and Anxiety Research</button>
       <div class="deeper-panel">
         <h4>The Mediterranean Diet and Mental Health Evidence</h4>
-        <p>The Mediterranean dietary pattern — olive oil, fish, vegetables, legumes, nuts, seeds, moderate whole grains, minimal processed food — is the most evidence-backed anti-inflammatory diet pattern for mental health. The SMILES trial (2017) showed that dietary intervention producing a Mediterranean-style eating pattern led to significantly greater reductions in depression scores compared to social support alone, with 32% of dietary group achieving remission versus 8% in control group.</p>
-        <p>For anxiety specifically, a 2019 meta-analysis found that dietary interventions significantly reduced anxiety symptoms, with the strongest effects from interventions that increased fruit and vegetable intake, reduced processed food consumption, and incorporated healthy fats.</p>
+        <p>The Mediterranean dietary pattern — olive oil, fish, vegetables, legumes, nuts, seeds, moderate whole grains, minimal processed food — is the most evidence-backed anti-inflammatory diet pattern for mental health. The SMILES trial (2017) showed that dietary intervention <a href="#ref18" class="cite">[18]</a> producing a Mediterranean-style eating pattern led to significantly greater reductions in depression scores compared to social support alone, with 32% of dietary group achieving remission versus 8% in control group.</p>
+        <p>For anxiety specifically, a 2019 meta-analysis found that dietary interventions significantly reduced anxiety symptoms <a href="#ref26" class="cite">[26]</a>, with the strongest effects from interventions that increased fruit and vegetable intake, reduced processed food consumption, and incorporated healthy fats.</p>
         <p>Key anti-inflammatory foods with evidence behind them:</p>
         <ul>
-          <li><strong>Fatty fish (salmon, sardines, mackerel):</strong> Omega-3s EPA and DHA directly reduce inflammatory cytokine production and have been shown to reduce anxiety in clinical trials</li>
+          <li><strong>Fatty fish (salmon, sardines, mackerel):</strong> Omega-3s EPA and DHA directly reduce inflammatory cytokine production and have been shown to reduce anxiety in clinical trials <a href="#ref19" class="cite">[19]</a></li>
           <li><strong>Extra virgin olive oil:</strong> Oleocanthal has NSAID-like anti-inflammatory properties; polyphenols support microbiome diversity</li>
-          <li><strong>Turmeric/curcumin:</strong> Potent anti-inflammatory, crosses blood-brain barrier, shown to reduce anxiety and depression-like behavior; bioavailability increased dramatically with black pepper (piperine)</li>
+          <li><strong>Turmeric/curcumin:</strong> Potent anti-inflammatory, crosses blood-brain barrier, shown to reduce anxiety and depression-like behavior <a href="#ref20" class="cite">[20]</a>; bioavailability increased dramatically with black pepper (piperine)</li>
           <li><strong>Leafy greens:</strong> Magnesium, folate, and nitrates reduce inflammatory markers; magnesium deficiency is linked to increased anxiety and heightened stress response</li>
           <li><strong>Berries:</strong> High polyphenol content, particularly anthocyanins, reduces neuroinflammation and improves cognitive function</li>
         </ul>
@@ -799,12 +844,12 @@
 
       <h3>What Damages the Gut Barrier</h3>
       <ul>
-        <li><strong>Chronic psychological stress:</strong> Cortisol and corticotropin-releasing hormone (CRH) directly increase intestinal permeability — the stress-gut connection is measurable and direct</li>
-        <li><strong>Ultra-processed foods:</strong> Emulsifiers (polysorbate-80, carboxymethylcellulose) common in processed foods have been shown to disrupt the mucus layer protecting the gut barrier</li>
+        <li><strong>Chronic psychological stress:</strong> Cortisol and corticotropin-releasing hormone (CRH) directly increase intestinal permeability <a href="#ref21" class="cite">[21]</a> — the stress-gut connection is measurable and direct</li>
+        <li><strong>Ultra-processed foods:</strong> Emulsifiers (polysorbate-80, carboxymethylcellulose) common in processed foods have been shown to disrupt the mucus layer <a href="#ref22" class="cite">[22]</a> protecting the gut barrier</li>
         <li><strong>Alcohol:</strong> Directly damages tight junctions and gut epithelial cells</li>
         <li><strong>NSAIDs (ibuprofen, aspirin):</strong> Long-term use significantly increases gut permeability</li>
         <li><strong>Dysbiosis:</strong> Loss of beneficial bacteria that produce short-chain fatty acids needed to maintain gut barrier integrity</li>
-        <li><strong>Gluten:</strong> In susceptible individuals, triggers zonulin release — a protein that opens tight junctions</li>
+        <li><strong>Gluten:</strong> In susceptible individuals, triggers zonulin release — a protein that opens tight junctions <a href="#ref24" class="cite">[24]</a></li>
       </ul>
 
       <div class="callout">
@@ -973,6 +1018,63 @@
         <p>A functional medicine doctor or integrative psychiatrist specifically is likely to be more conversant with the gut-brain axis research than a conventional primary care provider. Ask specifically about stool testing, gut permeability markers, and inflammatory markers (CRP, IL-6) if you want a more complete picture of what's happening at the gut level.</p>
       </div>
     </div>
+  </div>
+
+  
+  <div class="bibliography">
+    <h2>References & Further Reading</h2>
+    
+    <div class="bib-item" id="ref1"><span class="bib-num">[1]</span><span>Yano JM, et al. "Indigenous bacteria from the gut microbiota regulate host serotonin biosynthesis." <em>Cell.</em> 2015;161(2):264-276. <a href="https://doi.org/10.1016/j.cell.2015.02.047" target="_blank">doi:10.1016/j.cell.2015.02.047</a></span></div>
+    
+    <div class="bib-item" id="ref2"><span class="bib-num">[2]</span><span>Furness JB. "The enteric nervous system and neurogastroenterology." <em>Nat Rev Gastroenterol Hepatol.</em> 2012;9(5):286-294. <a href="https://doi.org/10.1038/nrgastro.2012.32" target="_blank">doi:10.1038/nrgastro.2012.32</a></span></div>
+    
+    <div class="bib-item" id="ref3"><span class="bib-num">[3]</span><span>Berthoud HR, Neuhuber WL. "Functional and chemical anatomy of the afferent vagal system." <em>Auton Neurosci.</em> 2000;85(1-3):1-17. <a href="https://doi.org/10.1016/S1566-0702(00)00215-0" target="_blank">doi:10.1016/S1566-0702(00)00215-0</a></span></div>
+    
+    <div class="bib-item" id="ref4"><span class="bib-num">[4]</span><span>Sender R, Fuchs S, Milo R. "Revised Estimates for the Number of Human and Bacteria Cells in the Body." <em>Cell.</em> 2016;164(3):337-340. <a href="https://doi.org/10.1016/j.cell.2016.01.013" target="_blank">doi:10.1016/j.cell.2016.01.013</a></span></div>
+    
+    <div class="bib-item" id="ref5"><span class="bib-num">[5]</span><span>Cryan JF, et al. "The Microbiota-Gut-Brain Axis." <em>Physiol Rev.</em> 2019;99(4):1877-2013. <a href="https://doi.org/10.1152/physrev.00018.2018" target="_blank">doi:10.1152/physrev.00018.2018</a></span></div>
+    
+    <div class="bib-item" id="ref6"><span class="bib-num">[6]</span><span>Clarke G, et al. "The microbiome-gut-brain axis during early life regulates the hippocampal serotonergic system in a sex-dependent manner." <em>Mol Psychiatry.</em> 2013;18(6):666-673. <a href="https://doi.org/10.1038/mp.2012.77" target="_blank">doi:10.1038/mp.2012.77</a></span></div>
+    
+    <div class="bib-item" id="ref7"><span class="bib-num">[7]</span><span>Canavan C, West J, Card T. "The epidemiology of irritable bowel syndrome." <em>Clin Epidemiol.</em> 2014;6:71-80. <a href="https://doi.org/10.2147/CLEP.S40245" target="_blank">doi:10.2147/CLEP.S40245</a></span></div>
+    
+    <div class="bib-item" id="ref8"><span class="bib-num">[8]</span><span>Gershon MD. <em>The Second Brain: A Groundbreaking New Understanding of Nervous Disorders of the Stomach and Intestine.</em> HarperCollins; 1998. ISBN: 0-06-018252-0</span></div>
+    
+    <div class="bib-item" id="ref9"><span class="bib-num">[9]</span><span>Furness JB, et al. "The enteric nervous system and gastrointestinal innervation: integrated local and central control." <em>Adv Exp Med Biol.</em> 2014;817:39-71. <a href="https://doi.org/10.1007/978-1-4939-0897-4_3" target="_blank">doi:10.1007/978-1-4939-0897-4_3</a></span></div>
+    
+    <div class="bib-item" id="ref10"><span class="bib-num">[10]</span><span>Thayer JF, Lane RD. "A model of neurovisceral integration in emotion regulation and dysregulation." <em>J Affect Disord.</em> 2000;61(3):201-216. <a href="https://doi.org/10.1016/s0165-0327(00)00338-4" target="_blank">doi:10.1016/s0165-0327(00)00338-4</a></span></div>
+    
+    <div class="bib-item" id="ref11"><span class="bib-num">[11]</span><span>Chambers ES, et al. "Effects of targeted delivery of propionate to the human colon on appetite regulation, body weight maintenance and adiposity in overweight adults." <em>Gut.</em> 2015;64(11):1744-1754. <a href="https://doi.org/10.1136/gutjnl-2014-307913" target="_blank">doi:10.1136/gutjnl-2014-307913</a></span></div>
+    
+    <div class="bib-item" id="ref12"><span class="bib-num">[12]</span><span>Bravo JA, et al. "Ingestion of Lactobacillus strain regulates emotional behavior and central GABA receptor expression in a mouse via the vagus nerve." <em>PNAS.</em> 2011;108(38):16050-16055. <a href="https://doi.org/10.1073/pnas.1102999108" target="_blank">doi:10.1073/pnas.1102999108</a></span></div>
+    
+    <div class="bib-item" id="ref13"><span class="bib-num">[13]</span><span>Eisenhofer G, et al. "Substantial production of dopamine in the human gastrointestinal tract." <em>J Clin Endocrinol Metab.</em> 1997;82(11):3864-3871. <a href="https://doi.org/10.1210/jcem.82.11.4339" target="_blank">doi:10.1210/jcem.82.11.4339</a></span></div>
+    
+    <div class="bib-item" id="ref14"><span class="bib-num">[14]</span><span>Qin J, et al. "A human gut microbial gene catalogue established by metagenomic sequencing." <em>Nature.</em> 2010;464(7285):59-65. <a href="https://doi.org/10.1038/nature08821" target="_blank">doi:10.1038/nature08821</a></span></div>
+    
+    <div class="bib-item" id="ref15"><span class="bib-num">[15]</span><span>Kelly JR, et al. "Transferring the blues: Depression-associated gut microbiota induces neurobehavioural changes in the rat." <em>J Psychiatr Res.</em> 2016;82:109-118. <a href="https://doi.org/10.1016/j.jpsychires.2016.07.019" target="_blank">doi:10.1016/j.jpsychires.2016.07.019</a></span></div>
+    
+    <div class="bib-item" id="ref16"><span class="bib-num">[16]</span><span>Miller AH, Raison CL. "The role of inflammation in depression: from evolutionary imperative to modern treatment target." <em>Nat Rev Immunol.</em> 2016;16(1):22-34. <a href="https://doi.org/10.1038/nri.2015.5" target="_blank">doi:10.1038/nri.2015.5</a></span></div>
+    
+    <div class="bib-item" id="ref17"><span class="bib-num">[17]</span><span>Maes M, et al. "The inflammatory & neurodegenerative (I&ND) hypothesis of depression." <em>Metab Brain Dis.</em> 2009;24(1):27-53. <a href="https://doi.org/10.1007/s11011-008-9118-1" target="_blank">doi:10.1007/s11011-008-9118-1</a></span></div>
+    
+    <div class="bib-item" id="ref18"><span class="bib-num">[18]</span><span>Jacka FN, et al. "A randomised controlled trial of dietary improvement for adults with major depression (the 'SMILES' trial)." <em>BMC Med.</em> 2017;15(1):23. <a href="https://doi.org/10.1186/s12916-017-0791-y" target="_blank">doi:10.1186/s12916-017-0791-y</a></span></div>
+    
+    <div class="bib-item" id="ref19"><span class="bib-num">[19]</span><span>Su KP, et al. "Association of Use of Omega-3 Polyunsaturated Fatty Acids With Changes in Severity of Anxiety Symptoms." <em>JAMA Netw Open.</em> 2018;1(5):e182327. <a href="https://doi.org/10.1001/jamanetworkopen.2018.2327" target="_blank">doi:10.1001/jamanetworkopen.2018.2327</a></span></div>
+    
+    <div class="bib-item" id="ref20"><span class="bib-num">[20]</span><span>Lopresti AL, Drummond PD. "Efficacy of curcumin, and a saffron/curcumin combination for the treatment of major depression." <em>J Affect Disord.</em> 2017;207:188-196. <a href="https://doi.org/10.1016/j.jad.2016.09.049" target="_blank">doi:10.1016/j.jad.2016.09.049</a></span></div>
+    
+    <div class="bib-item" id="ref21"><span class="bib-num">[21]</span><span>Söderholm JD, Perdue MH. "Stress and gastrointestinal tract. II. Stress and intestinal barrier function." <em>Am J Physiol Gastrointest Liver Physiol.</em> 2001;280(1):G7-G13. <a href="https://doi.org/10.1152/ajpgi.2001.280.1.G7" target="_blank">doi:10.1152/ajpgi.2001.280.1.G7</a></span></div>
+    
+    <div class="bib-item" id="ref22"><span class="bib-num">[22]</span><span>Chassaing B, et al. "Dietary emulsifiers impact the mouse gut microbiota promoting colitis and metabolic syndrome." <em>Nature.</em> 2015;519(7541):92-96. <a href="https://doi.org/10.1038/nature14232" target="_blank">doi:10.1038/nature14232</a></span></div>
+    
+    <div class="bib-item" id="ref23"><span class="bib-num">[23]</span><span>Kim MH, Kim H. "The Roles of Glutamine in the Intestine and Its Implication in Intestinal Diseases." <em>Int J Mol Sci.</em> 2017;18(5):1051. <a href="https://doi.org/10.3390/ijms18051051" target="_blank">doi:10.3390/ijms18051051</a></span></div>
+    
+    <div class="bib-item" id="ref24"><span class="bib-num">[24]</span><span>Fasano A. "Zonulin, regulation of tight junctions, and autoimmune diseases." <em>Ann N Y Acad Sci.</em> 2012;1258(1):25-33. <a href="https://doi.org/10.1111/j.1749-6632.2012.06538.x" target="_blank">doi:10.1111/j.1749-6632.2012.06538.x</a></span></div>
+    
+    <div class="bib-item" id="ref25"><span class="bib-num">[25]</span><span>Messaoudi M, et al. "Assessment of psychotropic-like properties of a probiotic formulation (Lactobacillus helveticus R0052 and Bifidobacterium longum R0175) in rats and human subjects." <em>Br J Nutr.</em> 2011;105(5):755-764. <a href="https://doi.org/10.1017/S0007114510003958" target="_blank">doi:10.1017/S0007114510003958</a></span></div>
+    
+    <div class="bib-item" id="ref26"><span class="bib-num">[26]</span><span>Aucoin M, et al. "Diet and Anxiety: A Scoping Review." <em>Nutrients.</em> 2021;13(12):4418. <a href="https://doi.org/10.3390/nu13124418" target="_blank">doi:10.3390/nu13124418</a></span></div>
   </div>
 
   <div class="footer-note">
